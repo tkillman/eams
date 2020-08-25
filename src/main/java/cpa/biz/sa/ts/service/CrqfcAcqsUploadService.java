@@ -1,5 +1,7 @@
 package cpa.biz.sa.ts.service;
 
+import org.springframework.validation.BindingResult;
+
 import cpa.biz.sa.ts.model.CrqfcAcqsUploadVO;
 
 /**
@@ -34,4 +36,6 @@ public interface CrqfcAcqsUploadService {
 	public int updateCrqfcAcqsUploadExcel(CrqfcAcqsUploadVO crqfcAcqsUploadVO);
 	
 	public String returnAMethod();
+	
+	public void validate(CrqfcAcqsUploadVO crqfcAcqsUploadVO, BindingResult bindingResult);
 }

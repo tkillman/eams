@@ -1,5 +1,8 @@
 package cpa.biz.sa.ts.web;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,7 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
 
 import cpa.biz.sa.ts.model.CrqfcAcqsUploadVO;
 import cpa.biz.sa.ts.service.CrqfcAcqsUploadService;
+import cpa.cmm.service.EgovFileMngUtil;
 
 /**
 * 
@@ -71,11 +75,13 @@ public class CrqfcAcqsUploadController {
 											, MultipartHttpServletRequest mptRequest) {
 		
 		
-		beanValidator.validate(crqfcAcqsUploadVO, bindingResult);
+		//beanValidator.validate(crqfcAcqsUploadVO, bindingResult);
 		
 		Logger.debug("hello world");
 		//crqfcAcqsUploadService.updateCrqfcAcqsUploadExcel(crqfcAcqsUploadVO);
-		return null;
+		
+		crqfcAcqsUploadService.validate(crqfcAcqsUploadVO, bindingResult);
+		return "sa/ts/crqfcAcqsUploadForm";
 	}
 	
 	/**
@@ -86,7 +92,16 @@ public class CrqfcAcqsUploadController {
 	* @return String
 	* @exception Exception
 	*/
-	public String writeCrqfcAcqsSampleUploadExcel(CrqfcAcqsUploadVO crqfcAcqsUploadVO) {
+	@RequestMapping("/sa/ts/writeCrqfcAcqsSampleUploadExcel.do")
+	public String writeCrqfcAcqsSampleUploadExcel(CrqfcAcqsUploadVO crqfcAcqsUploadVO, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		String filePath = "C:\\Users\\dkkim\\git\\eams\\src\\main\\webapp\\upload\\자격증엑셀업로드샘플.xlsx";
+		
+		request.setAttribute("downFile", filePath);
+		request.setAttribute("orgFileName", "자격증엑셀업로드샘플.xlsx");
+		request.setAttribute("orginFile", "자격증엑셀업로드샘플.xlsx");
+		
+		EgovFileMngUtil.downFile(request, response);
 		
 		return null;
 	}

@@ -31,6 +31,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import cpa.cmm.EgovBrowserUtil;
 import cpa.cmm.EgovWebUtil;
 import cpa.cmm.util.EgovResourceCloseHelper;
 
@@ -219,11 +220,23 @@ public class EgovFileMngUtil {
 
 		byte[] buffer = new byte[BUFF_SIZE]; //buffer size 2K.
 
-		response.setContentType("application/x-msdownload");
-		response.setHeader("Content-Disposition:", "attachment; filename=" + new String(orgFileName.getBytes(), "UTF-8"));
-		response.setHeader("Content-Transfer-Encoding", "binary");
-		response.setHeader("Pragma", "no-cache");
-		response.setHeader("Expires", "0");
+//		response.setContentType("application/x-msdownload");
+//		response.setHeader("Content-Disposition:", "attachment; filename=" + new String(orgFileName.getBytes(), "UTF-8"));
+//		response.setHeader("Content-Transfer-Encoding", "binary");
+//		response.setHeader("Pragma", "no-cache");
+//		response.setHeader("Expires", "0");
+		
+		String mimetype = "application/x-msdownload";
+		String userAgent = request.getHeader("User-Agent");
+		HashMap<String,String> result = EgovBrowserUtil.getBrowser(userAgent);
+		if ( !EgovBrowserUtil.MSIE.equals(result.get(EgovBrowserUtil.TYPEKEY)) ) {
+			mimetype = "application/x-stuff";
+		}
+		
+		String contentDisposition = EgovBrowserUtil.getDisposition(orgFileName,userAgent,"UTF-8");
+		response.setContentType(mimetype);
+		response.setHeader("Content-Disposition", contentDisposition);
+		response.setContentLengthLong(file.length());
 
 		BufferedInputStream fin = null;
 		BufferedOutputStream outs = null;
