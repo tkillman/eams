@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	  
+	<bean name="propertiesService" class="cpa.cmm.service.CustomPropertyService" destroy-method="destroy">
+		<property name="properties">
+	        <map>
+	        	<entry key="pageUnit" value="20"/>
+	        	<entry key="pageSize" value="10"/>
+	        	<entry key="UPFLPATH" value="/data/Upload/"/>
+	        	<entry key="SITECODE" value="NLIMS001"/>
+	        	<entry key="ALLAUTH" value="OPENAUTH"/><!-- 관리자전체권한  -->
+	        	<entry key="passwordChangeDt" value="90"/>
+	        	<entry key="pageUnitList">
+	        		<list>
+	        			<value>10</value>
+	        			<value>20</value>
+	        			<value>30</value>
+	        			<value>40</value>
+	        			<value>50</value>
+	        			<value>100</value>
+	        		</list>
+	        	</entry>
+	        </map>
+		</property>
+
+	</bean>
+	
+</beans>	

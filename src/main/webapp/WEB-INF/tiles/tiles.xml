@@ -1,0 +1,34 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- 기본 -->
+    <definition name="default_layout" template="/WEB-INF/tiles/template/default_template.jsp">
+        <put-attribute name="title" value="중앙경찰학교" />
+        <put-attribute name="header" value="/WEB-INF/tiles/template/header.jsp" />
+        <put-attribute name="left"   value="/WEB-INF/tiles/template/left.jsp" />
+        <put-attribute name="body"   value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+    </definition>
+
+    <!-- empty ui  -->
+    <definition name="empty_layout" template="/WEB-INF/tiles/template/empty_template.jsp">
+        <put-attribute name="body"   value="" />
+    </definition>
+
+    <!--메인 -->
+    <definition name="main" extends="empty_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/main.jsp" />
+    </definition>
+	
+	<definition name="*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/{1}/{2}/{3}.jsp" />
+    </definition>
+    
+    <definition name="*/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/{1}/{2}/{3}.jsp" />
+    </definition>
+
+</tiles-definitions>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jboss-web>
+    <context-root>/</context-root>
+    <symbolic-linking-enabled>true</symbolic-linking-enabled>
+    <replication-config>
+        <replication-trigger>SET</replication-trigger>
+        <replication-granularity>SESSION</replication-granularity>
+    </replication-config>
+    <resource-ref>
+        <res-ref-name>jdbc/cpaDS_DEV</res-ref-name>
+        <jndi-name>java:jboss/cpaDS_DEV</jndi-name>
+    </resource-ref>
+    
+</jboss-web>
