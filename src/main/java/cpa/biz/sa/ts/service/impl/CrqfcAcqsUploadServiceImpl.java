@@ -89,7 +89,7 @@ public class CrqfcAcqsUploadServiceImpl implements CrqfcAcqsUploadService{
 			Sheet sheet = wbT.getSheetAt(0);
 			Logger.debug("sheet.getLastRowNum() ::" + sheet.getLastRowNum());
 			
-			if (uploadFile.getSize() == 0 || sheet.getLastRowNum() == 0 || sheet.getLastRowNum() == 1) {
+			if (uploadFile.getSize() == 0 || sheet.getLastRowNum() == 0 ) {
 				bindingResult.rejectValue(errorField, "stdntQuflcnExcelAtchmnflFile.emptyFile"); // 엑셀이 빈 파일입니다.
 				return;
 			}

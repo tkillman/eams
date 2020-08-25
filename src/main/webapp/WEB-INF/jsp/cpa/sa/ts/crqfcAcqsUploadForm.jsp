@@ -5,6 +5,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <script type="text/javascript">
+<c:if test="isSuccess">
+alert("업로드에 성공하였습니다.");
+</c:if>
 
 function fnSubmit () {
 	console.log('fnSubmit');
