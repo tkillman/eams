@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
+  
 <script type="text/javascript">
 <c:if test="isSuccess">
 alert("업로드에 성공하였습니다.");
@@ -24,3 +24,5 @@ function fnSubmit () {
 </form:form>
 
 <a href="/sa/ts/writeCrqfcAcqsSampleUploadExcel.do">자격증업로드샘플다운로드</a>
+
+<a href='<c:url value="/upload/자격증엑셀업로드샘플.xlsx"/>'>자격증업로드샘플다운로드222</a>

@@ -23,7 +23,6 @@
                 <value>classpath:/egovframework/message/message-common</value>
                 <value>classpath:/egovframework/message/cmm/message-common</value>
                 <value>classpath:/egovframework/message/cmm/err/message-common</value>
-                <value>classpath:/egovframework/message/**/**/**/**/*.properties</value>
 			</list>
 		</property>
 		<property name="cacheSeconds" value="60"/>

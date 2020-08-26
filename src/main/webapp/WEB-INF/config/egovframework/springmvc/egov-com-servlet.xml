@@ -4,8 +4,10 @@
 	<mvc:resources mapping="/html/**" location="/html/" cache-period="259200"/>
 	<mvc:resources mapping="/images/**" location="/images/" cache-period="259200"/>
 	<mvc:resources mapping="/js/**" location="/js/" cache-period="259200"/>
+	<mvc:resources mapping="/upload/**" location="/upload/" cache-period="259200"/>
+	<mvc:resources mapping="/jasmine/**" location="/jasmine/" cache-period="259200"/>
 	
-	<context:component-scan base-package="cpa, egovframework">
+	<context:component-scan base-package="cpa, egovframework, jasmine">
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

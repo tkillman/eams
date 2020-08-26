@@ -371,12 +371,13 @@
         </dependency>
 
         <!-- Ajax -->
+        <!--  
         <dependency>
             <groupId>net.sourceforge.ajaxtags</groupId>
             <artifactId>ajaxtags-resources</artifactId>
             <version>1.5.7</version>
         </dependency>
-
+-->
         <!-- WYSIWYG Editor -->
         <dependency>
             <groupId>com.ckeditor</groupId>
@@ -557,7 +558,7 @@
         </dependency>
  		-->
         <!-- cubrid driver -->
-
+<!--  
         <dependency>
             <groupId>cubrid</groupId>
             <artifactId>cubrid-jdbc</artifactId>
@@ -565,7 +566,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/cubrid_jdbc.jar</systemPath>
         </dependency>
-
+-->
 
         <!-- 3rd party 라이브러리로 별도의 설치 필요 끝 -->
 
@@ -665,6 +666,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
                 <configuration>
                     <skipTests>false</skipTests>
                     <forkMode>once</forkMode>

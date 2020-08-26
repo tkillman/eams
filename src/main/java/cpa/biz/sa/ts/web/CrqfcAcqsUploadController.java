@@ -113,4 +113,20 @@ public class CrqfcAcqsUploadController {
 		
 		return null;
 	}
+	
+	
+	/**
+	* Author : 김동규
+	* 자격증취득내역업로드 조회한다.
+	*
+	* @param CrqfcAcqsUploadVO - 조회할 정보가 담긴 CrqfcAcqsUploadVO
+	* @return String
+	* @exception Exception
+	*/
+	@RequestMapping("/jasmin/sa/ts/searchCrqfcAcqsUploadForm.do")
+	public String searchCrqfcAcqsUploadFormJasmine(CrqfcAcqsUploadVO crqfcAcqsUploadVO) {
+		Logger.debug("hello world");
+		
+		return "sa/ts/crqfcAcqsUploadFormJasmine";
+	}
 }
