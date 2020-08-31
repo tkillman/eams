@@ -51,9 +51,14 @@ function fnUpdateCrqfcAcqsUploadExcel () {
 	async = true;
 	data = {
 		excelFileJsonData : excelFileJsonData
-		, cno : '1'
 		, crseCode : '00'
 		, year : '2020'
+	}
+	
+	data2 = {
+			cno : '1'
+			, crseCode : '00'
+			, year : '2020'
 	}
 	callback = fnUpdateCrqfcAcqsUploadExcelCallback;
 	cfnCallAjax(url, type, async, data, callback);

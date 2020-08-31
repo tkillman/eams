@@ -3,6 +3,9 @@ package cpa.biz.sa.ts.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
@@ -28,6 +31,8 @@ import lombok.Data;
 */
 @Data
 public class CrqfcAcqsUploadVO2 {
+	
+	@NotNull
 	private Integer cno; /** 기수 */
 	
 	private String crseCode; /** 과정코드 */
@@ -36,6 +41,5 @@ public class CrqfcAcqsUploadVO2 {
 	
 	private String entschUno; /** 입교고유번호 */
 	
-	@JsonProperty("excelFileJsonData")
 	private List<CpaTeVO> excelFileJsonData; /** 엑셀jsonData*/
 }

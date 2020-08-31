@@ -17,6 +17,7 @@
 	ex) cfnCallAjax(url, type, async, param, fnInsertCallBack);
 /*/
 function cfnCallAjax(url, type, async, data, callback) {
+	console.log('cfnCallAjax','data',JSON.stringify(data));
 	$.ajax({
 		url: url
 		, type : type

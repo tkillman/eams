@@ -32,7 +32,7 @@ function CpaExcelDataProcess(fileEl, headerInfo) {
 		    reader.readAsBinaryString(input.files[0]);
 		},
 		excelExportCallback(sheet, cpaExcelStateData){ //callback function
-			cpaExcelStateData.excelFileJsonData = JSON.stringify(XLSX.utils.sheet_to_json(sheet,{raw : false}));
+			cpaExcelStateData.excelFileJsonData = XLSX.utils.sheet_to_json(sheet,{raw : false});
 			cpaExcelStateData.isExcelFileLoadEnd = true;
 		},
 		changeHeader(sheet, headerInfo){ //header 정보를 바꾼다.
