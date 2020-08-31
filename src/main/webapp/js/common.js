@@ -25,13 +25,11 @@ function cfnCallAjax(url, type, async, data, callback) {
 		, async : async
 		, data : JSON.stringify(data)
 		, success : function(response) {
-			var result = response.result;
+			//var result = response.result;
 			callback(response);
 		}
 		, error : function(xhr, option, error) {
-			alert("서버와 통신 중 장애가 발생 하였습니다.", function () {
-				history.back();
-			});
+			alert("서버와 통신 중 장애가 발생 하였습니다.");
 		}
 	});
 }

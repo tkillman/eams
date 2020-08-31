@@ -10,12 +10,12 @@
 		<setting name="jdbcTypeForNull" value="VARCHAR"></setting>
 	</settings>
 	
-	<!-- Type Aliases 설정-->
+	<!-- Type Aliases 설정
 	<typeAliases>
 		<typeAlias alias="egovMap" 			type="egovframework.rte.psl.dataaccess.util.EgovMap" />
 		<typeAlias alias="FileVO"			type="cpa.cmm.service.FileVO" />
 		<typeAlias alias="ComDefaultCodeVO" type="cpa.cmm.ComDefaultCodeVO" />
 		<typeAlias alias="comDefaultVO"		type="cpa.cmm.ComDefaultVO" />
 	</typeAliases>
-    
+    -->
 </configuration>

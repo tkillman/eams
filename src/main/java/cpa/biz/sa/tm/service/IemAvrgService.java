@@ -33,5 +33,5 @@ public interface IemAvrgService {
 	* @return List<IemAvrgVO>
 	* @exception Exception
 	*/
-	public List<IemAvrgVO> searchIemAvrgList(IemAvrgVO iemAvrgVO);
+	public List<IemAvrgVO> searchIemAvrgAjaxList(IemAvrgVO iemAvrgVO);
 }

@@ -40,8 +40,8 @@ public class EvlIndvdlzScoreController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchEvlIndvdlzScoreList(EvlIndvdlzScoreSearchVO evlIndvdlzScoreSearchVO) {
-		evlIndvdlzScoreService.searchEvlIndvdlzScoreList(evlIndvdlzScoreSearchVO);
+	public String searchEvlIndvdlzScoreAjaxList(EvlIndvdlzScoreSearchVO evlIndvdlzScoreSearchVO) {
+		evlIndvdlzScoreService.searchEvlIndvdlzScoreAjaxList(evlIndvdlzScoreSearchVO);
 		return null;
 	}
 	

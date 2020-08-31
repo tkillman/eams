@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cpa.biz.sa.tm.dao.ScreDistrbDAO;
+import cpa.biz.sa.tm.model.ScreDistrbSearchVO;
 import cpa.biz.sa.tm.model.ScreDistrbVO;
 import cpa.biz.sa.tm.service.ScreDistrbService;
 
@@ -35,11 +36,8 @@ public class ScreDistrbServiceImpl implements ScreDistrbService{
 	ScreDistrbDAO screDistrbDAO;
 	
 	@Override
-	public List<ScreDistrbVO> searchScreDistrbList(ScreDistrbVO screDistrbVO) {
-		
-		screDistrbDAO.selectList("ScreDistrbDAO.searchScreDistrbList", screDistrbVO);
-		
-		return null;
+	public List<ScreDistrbVO> searchScreDistrbAjaxList(ScreDistrbSearchVO screDistrbSearchVO) {
+		return screDistrbDAO.selectScreDistrbAjaxList(screDistrbSearchVO);
 	}
 
 	

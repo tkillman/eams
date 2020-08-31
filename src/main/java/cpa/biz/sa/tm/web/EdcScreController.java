@@ -3,6 +3,7 @@ package cpa.biz.sa.tm.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import cpa.biz.sa.tm.model.EdcScreSearchVO;
 import cpa.biz.sa.tm.model.EdcScreVO;
 import cpa.biz.sa.tm.service.EdcScreService;
 import cpa.biz.sa.tm.service.impl.EdcScreServiceImpl;
@@ -36,12 +37,12 @@ public class EdcScreController {
 	* Author : 김동규
 	* 교육성적표 조회한다.
 	*
-	* @param EdcScreVO - 조회할 정보가 담긴 EdcScreVO
+	* @param EdcScreSearchVO - 조회할 정보가 담긴 EdcScreSearchVO
 	* @return String
 	* @exception Exception
 	*/
-	public String searchEdcScre(EdcScreVO edcScreVO) {
-		edcScreService.searchEdcScre(edcScreVO);
+	public String searchEdcScre(EdcScreSearchVO edcScreSearchVO) {
+		edcScreService.searchEdcScre(edcScreSearchVO);
 		return null;
 	}
 	

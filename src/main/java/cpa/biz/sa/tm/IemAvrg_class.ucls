@@ -1,71 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="cpa.biz.co.tm.web.IemAvrgController" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/web/IemAvrgController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="153" x="407" y="74"/>    
+  <class id="1" language="java" name="cpa.biz.sa.tm.web.IemAvrgController" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/web/IemAvrgController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="243" x="213" y="32"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="cpa.biz.co.tm.service.IemAvrgService" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/service/IemAvrgService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="311" x="322" y="229"/>    
+  <interface id="2" language="java" name="cpa.biz.sa.tm.service.IemAvrgService" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/service/IemAvrgService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="88" width="311" x="177" y="200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="cpa.biz.co.tm.service.impl.IemAvrgServiceImpl" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/service/impl/IemAvrgServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="311" x="340" y="361"/>    
+  <class id="3" language="java" name="cpa.biz.sa.tm.service.impl.IemAvrgServiceImpl" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/service/impl/IemAvrgServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="333" y="381"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="cpa.biz.co.tm.dao.IemAvrgDAO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/dao/IemAvrgDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="113" x="808" y="376"/>    
+  <class id="4" language="java" name="cpa.biz.sa.tm.dao.IemAvrgDAO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/dao/IemAvrgDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="332" y="505"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="cpa.biz.co.tm.model.IemAvrgVO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/model/IemAvrgVO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="764" y="112"/>    
+  <class id="5" language="java" name="cpa.biz.sa.tm.model.IemAvrgSearchVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/model/IemAvrgSearchVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="593" y="136"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="6">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="7" name="iemAvrgDAO"/>      
-      <multiplicity id="8" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="9">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="10" name="iemAvrgService"/>      
-      <multiplicity id="11" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="12">    
+  <class id="6" language="java" name="cpa.biz.sa.tm.model.IemAvrgVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/model/IemAvrgVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="775" y="156"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="cpa.biz.sa.ss.model.CmmnTnEvlScoreVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ss/model/CmmnTnEvlScoreVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="616" y="628"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="8">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
+  <generalization id="9">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="10">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="11" name="iemAvrgDAO">        
+        <position height="0" width="0" x="-254" y="121"/>      
+      </attribute>      
+      <multiplicity id="12" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-254" y="121"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="13">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="14" name="iemAvrgService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="15" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -3,6 +3,7 @@
 <mapper namespace="MainDAO">
 	
 	<resultMap id="bbsList" type="cpa.biz.co.ma.model.MainVO">
+		<result property="pnum"               column="PNUM" /><!-- 목록번호 -->
 		<result property="bbsUno"             column="BBS_UNO" /><!-- 게시판고유번호 -->
 		<result property="deleteAt"           column="DELETE_AT" /><!-- 삭제여부 -->
 		<result property="nttCn"              column="NTT_CN" /><!-- 게시물내용 -->
@@ -16,29 +17,27 @@
 	</resultMap>
 	
 	<select id="selectBbsList" parameterType="cpa.biz.co.ma.model.MainVO" resultMap="bbsList">
-		
-		SELECT * FROM ( SELECT rownum rn, TB.* FROM ( /* selectBbsList */
-			SELECT 
-		       BBS_UNO            /* 게시판고유번호 */
-		     , DELETE_AT          /* 삭제여부 */
-		     , NTT_CN             /* 게시물내용 */
-		     , NTT_SJ             /* 게시물제목 */
-		     , NTT_UNO            /* 게시물고유번호 */
-		     , REGIST_DT          /* 등록일시 */
-		     , REGISTER           /* 등록자 */
-		     , UPDT_DT            /* 수정일시 */
-		     , UPDUSR             /* 수정자 */
-		     , UPPER_BBSCTT_NO    /* 부모글번호 */
-		  FROM TN_BBS
+		<!--  <include refid="CmmnDAO.listPagingHead"/>-->
+			SELECT /* selectBbsList */
+			      BBS_UNO            /* 게시판고유번호 */
+			    , DELETE_AT          /* 삭제여부 */
+			    , NTT_CN             /* 게시물내용 */
+			    , NTT_SJ             /* 게시물제목 */
+			    , NTT_UNO            /* 게시물고유번호 */
+			    , REGIST_DT          /* 등록일시 */
+			    , REGISTER           /* 등록자 */
+			    , UPDT_DT            /* 수정일시 */
+			    , UPDUSR             /* 수정자 */
+			    , UPPER_BBSCTT_NO    /* 부모글번호 */
+			FROM TN_BBS
 			ORDER BY BBS_UNO DESC
-		) TB ) Z WHERE rn BETWEEN #{firstIndex} + 1 AND #{firstIndex} + #{recordCountPerPage}
-						
+		<!--  <include refid="CmmnDAO.listPagingTail"/>	-->
 	</select>	
 	
 	<select id="selectBbsListCnt" parameterType="cpa.biz.co.ma.model.MainVO" resultType="java.lang.Integer">
-			SELECT
-				COUNT(BBS_UNO)
-			FROM
-				TN_BBS
+		SELECT
+			COUNT(BBS_UNO)
+		FROM
+			TN_BBS
 	</select>	
 </mapper>

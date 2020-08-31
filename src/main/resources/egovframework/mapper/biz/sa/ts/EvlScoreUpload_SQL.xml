@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EvlScoreUploadDAO">
+	<select id="selectTnEntschInfoAjaxList" resultType="cpa.biz.sa.ts.model.CmmnTnEntschInfoVO">
+		SELECT entsch_uno, "year", cno, crse_code, edc_begin_de
+				, edc_end_de, nmpr_co, cno_se_code, "register", regist_dt
+				, updusr, updt_dt
+		FROM tn_entsch_info
+	</select>
+	
+	<select id="selectTnIemInfoAjaxList" resultType="cpa.biz.sa.ts.model.CmmnTnIemInfoVO">
+		SELECT iem_code, iem_nm, use_at, "register", regist_dt, updusr, updt_dt
+		FROM tn_iem_info
+	</select>
+	
+	<select id="selectTnRealmInfoAjaxList" resultType="cpa.biz.sa.ts.model.CmmnTnRealmInfoVO">
+		SELECT realm_code, realm_nm, use_at, "register", regist_dt, updusr, updt_dt
+		FROM tn_realm_info
+	</select>
+	
+	<select id="selectTnSbjectInfoAjaxList" resultType="cpa.biz.sa.ts.model.CmmnTnSbjectInfoVO">
+		SELECT sbject_code, sbject_nm, upper_sbject_code, use_at, "register", regist_dt, updusr, updt_dt
+		FROM tn_sbject_info
+	</select>
+</mapper>

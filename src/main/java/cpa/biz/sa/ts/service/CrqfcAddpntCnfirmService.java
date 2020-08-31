@@ -34,5 +34,5 @@ public interface CrqfcAddpntCnfirmService {
 	* @return List<CrqfcAddpntCnfirmVO>
 	* @exception Exception
 	*/
-	public List<CrqfcAddpntCnfirmVO> searchCrqfcAddpntCnfirmList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO) throws Exception;
+	public List<CrqfcAddpntCnfirmVO> searchCrqfcAddpntCnfirmAjaxList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO) throws Exception;
 }

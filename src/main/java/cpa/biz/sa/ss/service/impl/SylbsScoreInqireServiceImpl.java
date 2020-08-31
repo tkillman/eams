@@ -36,9 +36,8 @@ public class SylbsScoreInqireServiceImpl implements SylbsScoreInqireService {
 	SylbsScoreInqireDAO sylbsScoreInqireDAO;
 	
 	@Override
-	public List<SylbsScoreInqireVO> searchSylbsScoreInqireList(SylbsScoreInqireSearchVO sylbsScoreInqireSearchVO) throws Exception {
-		sylbsScoreInqireDAO.list("SylbsScoreInqireDAO.searchSylbsScoreInqireList", sylbsScoreInqireSearchVO);
-		return sylbsScoreInqireDAO.searchSylbsScoreInqireList(sylbsScoreInqireSearchVO);
+	public List<SylbsScoreInqireVO> searchSylbsScoreInqireAjaxList(SylbsScoreInqireSearchVO sylbsScoreInqireSearchVO) throws Exception {
+		return sylbsScoreInqireDAO.selectSylbsScoreInqireAjaxList(sylbsScoreInqireSearchVO);
 	}
 
 }

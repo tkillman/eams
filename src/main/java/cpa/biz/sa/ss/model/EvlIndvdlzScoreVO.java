@@ -20,5 +20,8 @@ package cpa.biz.sa.ss.model;
 * </pre>
 */
 public class EvlIndvdlzScoreVO extends CmmnTnSdntObjctSubjectCnsrScoreVO{
-
+	
+	private String fnm; /** 이름 */
+	
+	private String stdntNo; /** 교번 */
 }

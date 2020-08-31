@@ -36,9 +36,9 @@ public class EvlIndvdlzScoreServiceImpl implements EvlIndvdlzScoreService {
 	EvlIndvdlzScoreDAO evlIndvdlzScoreDAO;
 	
 	@Override
-	public List<EvlIndvdlzScoreVO> searchEvlIndvdlzScoreList(EvlIndvdlzScoreSearchVO evlIndvdlzScoreSearchVO) {
+	public List<EvlIndvdlzScoreVO> searchEvlIndvdlzScoreAjaxList(EvlIndvdlzScoreSearchVO evlIndvdlzScoreSearchVO) {
 		
-		return evlIndvdlzScoreDAO.searchEvlIndvdlzScoreList(evlIndvdlzScoreSearchVO);
+		return evlIndvdlzScoreDAO.selectEvlIndvdlzScoreAjaxList(evlIndvdlzScoreSearchVO);
 	}
 
 }

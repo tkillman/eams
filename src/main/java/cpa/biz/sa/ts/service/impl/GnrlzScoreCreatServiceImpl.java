@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cpa.biz.sa.ts.dao.GnrlzScoreCreatDAO;
-import cpa.biz.sa.ts.model.GnrlzScoreCreatVO;
+import cpa.biz.sa.ts.model.GnrlzScoreCreatSearchVO;
 import cpa.biz.sa.ts.service.GnrlzScoreCreatService;
 
 /**
@@ -33,7 +33,7 @@ public class GnrlzScoreCreatServiceImpl implements GnrlzScoreCreatService {
 	GnrlzScoreCreatDAO gnrlzScoreCreatDAO;
 	
 	@Override
-	public int updateGnrlzScoreCreat(GnrlzScoreCreatVO gnrlzScoreCreatVO) {
+	public int updateGnrlzScoreCreat(GnrlzScoreCreatSearchVO gnrlzScoreCreatVO) {
 		gnrlzScoreCreatDAO.update("GnrlzScoreCreatDAO.updateGnrlzScoreCreat", gnrlzScoreCreatVO);
 		return 0;
 	}

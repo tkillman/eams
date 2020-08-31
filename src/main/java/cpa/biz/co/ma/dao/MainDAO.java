@@ -13,7 +13,7 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 * MainDAO.java
 * 클래스 설명 : 메인 DAO
 * 		
-* @author syan
+* @author 안선영
 * @since 2020.8.20
 * @version 1.0.0
 * @see
@@ -23,24 +23,26 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 *
 * 수정                           수정자	수정내용
 * -------                   --------           --------------------------
-* 2020.8.20     syan	최초 생성
+* 2020.8.20     안선영	최초 생성
 * </pre>
 */
 
 @Repository("MainDAO")
 public class MainDAO extends EgovComAbstractDAO {
 	
-	/**
-	* 공지사항를 조회한다.
-	* @param MainVO
-	* @return
-	*/	
 	public List<?> selectBbsList(MainVO mainVO) {
-		
 		return list("MainDAO.selectBbsList", mainVO);
 	}
 	
 	public int selectBbsListCnt(MainVO mainVO) {
 		return (Integer)selectOne("MainDAO.selectBbsListCnt", mainVO);
+	}
+	
+	public MainVO loginProc(MainVO mainVO) {
+		return (MainVO) selectOne("MainDAO.loginProc", mainVO);
+	}
+	
+	public MainVO searchPassword(MainVO mainVO) {
+		return (MainVO) selectOne("MainDAO.searchPassword", mainVO);
 	}
 }

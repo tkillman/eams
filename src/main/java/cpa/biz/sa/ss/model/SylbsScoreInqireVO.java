@@ -24,4 +24,8 @@ import lombok.Data;
 @Data
 public class SylbsScoreInqireVO extends CmmnTnEvlScoreVO {
 	
+	private String stdntNo; /** 교번 */
+	
+	private String fnm; /** 이름 */
+	
 }

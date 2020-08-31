@@ -2,6 +2,8 @@ package cpa.biz.sa.tm.dao;
 
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.EdcScreSearchVO;
+import cpa.biz.sa.tm.model.EdcScreVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -26,4 +28,8 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("EdcScreDAO")
 public class EdcScreDAO extends EgovComAbstractDAO{
 
+	public EdcScreVO searchEdcScre(EdcScreSearchVO edcScreSearchVO) {
+		return selectOne("EdcScreDAO.searchEdcScre", edcScreSearchVO);
+	}
+	
 }

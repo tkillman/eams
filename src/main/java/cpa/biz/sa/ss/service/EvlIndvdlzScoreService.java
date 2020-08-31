@@ -34,7 +34,7 @@ public interface EvlIndvdlzScoreService {
 	* @return List<EvlIndvdlzScoreVO>
 	* @exception Exception
 	*/
-	public List<EvlIndvdlzScoreVO> searchEvlIndvdlzScoreList(EvlIndvdlzScoreSearchVO evlIndvdlzScoreSearchVO);
+	public List<EvlIndvdlzScoreVO> searchEvlIndvdlzScoreAjaxList(EvlIndvdlzScoreSearchVO evlIndvdlzScoreSearchVO);
 	
 	
 }

@@ -39,9 +39,9 @@ public class ExevlScoreInqireController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchExevlScoreInqireList(ExevlScoreInqireVO exevlScoreInqireVO) {
+	public String searchExevlScoreInqireAjaxList(ExevlScoreInqireVO exevlScoreInqireVO) {
 		
-		exevlScoreInqireService.searchExevlScoreInqireList(exevlScoreInqireVO);
+		exevlScoreInqireService.searchExevlScoreInqireAjaxList(exevlScoreInqireVO);
 		return null;
 	}
 	
@@ -70,4 +70,5 @@ public class ExevlScoreInqireController {
 	public String writeExevlScoreInqireExcel(ExevlScoreInqireVO exevlScoreInqireVO) {
 		return null;
 	}
+
 }

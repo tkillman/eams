@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CmmnJobUtilDAO">
+	<!-- 입교정보 -->
+	<select id="selectTnEntschInfo" parameterType="cpa.biz.sa.ts.model.CmmnJobUtilSearchVO" resultType="cpa.biz.sa.ts.model.CmmnTnEntschInfoVO">
+		SELECT /*CmmnJobUtilDAO.selectTnEntschInfo*/ entsch_uno, "year", cno, crse_code, edc_begin_de
+				, edc_end_de, nmpr_co, cno_se_code, "register", regist_dt
+				, updusr, updt_dt
+		FROM tn_entsch_info
+		WHERE "year" = #{year}
+		AND cno = #{cno}
+		AND crse_code = #{crseCode}
+	</select>
+	
+	<!-- 기수 요목 정보 -->
+	<select id="selectTnCnoSylbsInfo" parameterType="cpa.biz.sa.ts.model.CmmnJobUtilSearchVO" resultType="cpa.biz.sa.ts.model.CmmnTnCnoSylbsInfoVO">
+		SELECT sylbs_uno, sylbs_code, entsch_uno, "register", regist_dt, updusr, updt_dt
+		FROM tn_cno_sylbs_info
+		WHERE sylbs_code = #{sylbsCode}
+		AND ENTSCH_UNO = #{entschUno}
+	</select>
+	
+	<!-- 기수평가관리 -->
+	<select id="selectTnCnoEvlMng" parameterType="cpa.biz.sa.ts.model.CmmnJobUtilSearchVO" resultType="cpa.biz.sa.ts.model.CmmnTnCnoEvlMngVO">
+		SELECT evl_uno, sylbs_uno, realm_code, iem_code, qesitm_co
+				, allot, ordr, "register", regist_dt, updusr
+				, updt_dt, tie_priory_code
+		FROM tn_cno_evl_mng
+		WHERE SYLBS_UNO = #{sylbsUno}
+		AND REALM_CODE = #{realmCode}
+		AND IEM_CODE = #{iemCode}
+	</select>
+	
+	<select id="selectTnStdntInfoAjaxList" parameterType="cpa.biz.sa.ts.model.CmmnJobUtilSearchVO" resultType="cpa.biz.sa.ts.model.CmmnTnStdntInfoVO">
+		SELECT stdnt_uno
+				, stdnt_no, clas_uno, brck_info_uno, entsch_uno, re_entsch_mng_uno
+				, ihidnum, fnm, password, apyexm_police_code, chcrt_fnm, eng_fnm
+				, zip, adres, brthdy, sexdstn_code, ownhom_cttpc
+				, moblphon, insch_cttpc, height, bdwgh, left_crrc_vspr
+				, rght_crrc_vspr, glss_wear_at, bdp_code, charct_ty, spcabl_code
+				, hobby_code, smkng_code, dnpy_code, relgn_code, polc_apply_sync, mrrg_at
+				, mltart_code, grad, unqspa_code, unqspa_etc_nm, mtrsc_code, curimpt_nm
+				, clss_code, ofcr_orgin_code, ssn, srvic_begin_de, srvic_end_de
+				, rm, army_srvic_place, entsch_sttus_code, entsch_de, lvskul_de
+				, lvskul_resn, lvskul_at, indhelt_sttus_cn, emr_cttpc_adres, emr_cttpsber_nm
+				, emr_cntctrrel_nm, stdnt_hed_at, password_error_cot, password_change_de, tmpr_password_issu_at
+				, intrst_stdnt_at, delete_at, regist_dt, "register", updt_dt
+				, updusr
+		FROM tn_stdnt_info
+		WHERE ENTSCH_UNO = #{entschUno}
+	</select>
+</mapper>

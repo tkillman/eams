@@ -19,6 +19,9 @@ package cpa.biz.sa.ts.model;
 * 2020.08.21                   김동규	최초 생성
 * </pre>
 */
-public class CrqfcAddpntCnfirmVO extends CmmTnStdntQuflcnInfoVO{
-
+public class CrqfcAddpntCnfirmVO extends CmmnTnStdntQuflcnInfoVO{
+	
+	private String fnm; /** 이름 */
+	
+	private String stdntNo; /** 교번 */
 }

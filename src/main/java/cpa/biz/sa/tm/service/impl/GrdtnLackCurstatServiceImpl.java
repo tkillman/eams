@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cpa.biz.sa.tm.dao.GrdtnLackCurstatDAO;
+import cpa.biz.sa.tm.model.GrdtnLackCurstatSearchVO;
 import cpa.biz.sa.tm.model.GrdtnLackCurstatVO;
 import cpa.biz.sa.tm.service.GrdtnLackCurstatService;
 
@@ -35,9 +36,9 @@ public class GrdtnLackCurstatServiceImpl implements GrdtnLackCurstatService {
 	GrdtnLackCurstatDAO grdtnLackCurstatDAO;
 	
 	@Override
-	public List<GrdtnLackCurstatVO> searchGrdtnLackCurstatList(GrdtnLackCurstatVO grdtnLackCurstatVO) {
-		grdtnLackCurstatDAO.selectList("GrdtnLackCurstatDAO.searchGrdtnLackCurstatList", grdtnLackCurstatVO);
-		return null;
+	public List<GrdtnLackCurstatVO> searchGrdtnLackCurstatAjaxList(GrdtnLackCurstatSearchVO grdtnLackCurstatSearchVO) {
+		
+		return grdtnLackCurstatDAO.selectGrdtnLackCurstatList(grdtnLackCurstatSearchVO);
 	}
 
 }

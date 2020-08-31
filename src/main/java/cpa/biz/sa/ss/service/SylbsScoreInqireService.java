@@ -34,6 +34,6 @@ public interface SylbsScoreInqireService {
 	* @return List<SylbsScoreInqireVO>
 	* @exception Exception
 	*/
-	public List<SylbsScoreInqireVO> searchSylbsScoreInqireList(SylbsScoreInqireSearchVO sylbsScoreInqireSearchVO) throws Exception;
+	public List<SylbsScoreInqireVO> searchSylbsScoreInqireAjaxList(SylbsScoreInqireSearchVO sylbsScoreInqireSearchVO) throws Exception;
 	
 }

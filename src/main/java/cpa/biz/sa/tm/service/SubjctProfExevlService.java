@@ -33,6 +33,6 @@ public interface SubjctProfExevlService {
 	* @return List<SubjctProfExevlVO>
 	* @exception Exception
 	*/
-	public List<SubjctProfExevlVO> searchSubjctProfExevlList(SubjctProfExevlVO subjctProfExevlVO);
+	public List<SubjctProfExevlVO> searchSubjctProfExevlAjaxList(SubjctProfExevlVO subjctProfExevlVO);
 	
 }

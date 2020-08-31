@@ -2,6 +2,7 @@ package cpa.biz.sa.tm.service;
 
 import java.util.List;
 
+import cpa.biz.sa.tm.model.ScreDistrbSearchVO;
 import cpa.biz.sa.tm.model.ScreDistrbVO;
 
 /**
@@ -29,9 +30,9 @@ public interface ScreDistrbService {
 	* Author : 김동규
 	* 성적분포표 목록조회한다.
 	*
-	* @param ScreDistrbVO - 조회할 정보가 담긴 ScreDistrbVO
+	* @param ScreDistrbSearchVO - 조회할 정보가 담긴 ScreDistrbSearchVO
 	* @return List<ScreDistrbVO>
 	* @exception Exception
 	*/
-	public List<ScreDistrbVO> searchScreDistrbList(ScreDistrbVO screDistrbVO);
+	public List<ScreDistrbVO> searchScreDistrbAjaxList(ScreDistrbSearchVO screDistrbSearchVO);
 }

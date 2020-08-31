@@ -35,9 +35,9 @@ public class SubjctProfExevlServiceImpl implements SubjctProfExevlService {
 	SubjctProfExevlDAO subjctProfExevlDAO;
 	
 	@Override
-	public List<SubjctProfExevlVO> searchSubjctProfExevlList(SubjctProfExevlVO subjctProfExevlVO) {
-		subjctProfExevlDAO.selectList("SubjctProfExevlDAO.searchSubjctProfExevlList", subjctProfExevlVO);
-		return null;
+	public List<SubjctProfExevlVO> searchSubjctProfExevlAjaxList(SubjctProfExevlVO subjctProfExevlVO) {
+		
+		return subjctProfExevlDAO.selectSubjctProfExevlAjaxList(subjctProfExevlVO);
 	}
 
 }

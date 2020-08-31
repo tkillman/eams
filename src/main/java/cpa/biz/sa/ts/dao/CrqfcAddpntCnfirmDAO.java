@@ -39,7 +39,7 @@ public class CrqfcAddpntCnfirmDAO extends EgovComAbstractDAO{
 	* @return List<CrqfcAddpntCnfirmVO>
 	* @exception Exception
 	*/
-	public List<CrqfcAddpntCnfirmVO> searchCrqfcAddpntCnfirmList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO){
-		return selectList("CrqfcAddpntCnfirmDAO.searchCrqfcAddpntCnfirmList", crqfcAddpntCnfirmSearchVO);
+	public List<CrqfcAddpntCnfirmVO> selectCrqfcAddpntCnfirmAjaxList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO){
+		return selectList("CrqfcAddpntCnfirmDAO.selectCrqfcAddpntCnfirmAjaxList", crqfcAddpntCnfirmSearchVO);
 	}
 }

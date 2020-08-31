@@ -9,7 +9,7 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("IndvdlScoreInqireDAO")
 public class IndvdlScoreInqireDAO extends EgovComAbstractDAO{
 
-	public IndvdlScoreInqireVO searchIndvdlScoreInqire(IndvdlScoreInqireSearchVO indvdlScoreInqireSearchVO){
-		return selectOne("IndvdlScoreInqireDAO.searchIndvdlScoreInqire", indvdlScoreInqireSearchVO);
+	public IndvdlScoreInqireVO selectIndvdlScoreInqireDetail(IndvdlScoreInqireSearchVO indvdlScoreInqireSearchVO){
+		return selectOne("IndvdlScoreInqireDAO.selectIndvdlScoreInqireDetail", indvdlScoreInqireSearchVO);
 	}
 }

@@ -1,7 +1,10 @@
 package cpa.biz.sa.ss.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.ss.model.EvlAllScoreVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 
@@ -26,5 +29,8 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 */
 @Repository("EvlAllScoreDAO")
 public class EvlAllScoreDAO extends EgovComAbstractDAO{
-
+	
+	public List<EvlAllScoreVO> selectEvlAllScoreAjaxList(EvlAllScoreVO evlAllScoreVO){
+		return selectList("EvlAllScoreDAO.selectEvlAllScoreAjaxList");
+	}
 }

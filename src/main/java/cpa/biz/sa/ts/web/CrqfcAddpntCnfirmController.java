@@ -40,9 +40,9 @@ public class CrqfcAddpntCnfirmController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchCrqfcAddpntCnfirmList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO) throws Exception {
+	public String searchCrqfcAddpntCnfirmAjaxList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO) throws Exception {
 		
-		crqfcAddpntCnfirmService.searchCrqfcAddpntCnfirmList(crqfcAddpntCnfirmSearchVO);
+		crqfcAddpntCnfirmService.searchCrqfcAddpntCnfirmAjaxList(crqfcAddpntCnfirmSearchVO);
 		
 		return null;
 	}

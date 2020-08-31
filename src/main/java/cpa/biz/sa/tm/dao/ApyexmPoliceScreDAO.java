@@ -1,7 +1,10 @@
 package cpa.biz.sa.tm.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.ApyexmPoliceScreVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -25,5 +28,8 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 */
 @Repository("ApyexmPoliceScreDAO")
 public class ApyexmPoliceScreDAO extends EgovComAbstractDAO{
-
+	
+	public List<ApyexmPoliceScreVO> selectApyexmPoliceScreAjaxList(ApyexmPoliceScreVO apyexmPoliceScreVO){
+		return selectList("ApyexmPoliceScreDAO.searchApyexmPoliceScreList", apyexmPoliceScreVO);
+	}
 }

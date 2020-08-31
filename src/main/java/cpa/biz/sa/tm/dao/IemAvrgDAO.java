@@ -1,7 +1,10 @@
 package cpa.biz.sa.tm.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.IemAvrgVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -26,4 +29,7 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("IemAvrgDAO")
 public class IemAvrgDAO extends EgovComAbstractDAO{
 
+	public List<IemAvrgVO> selectIemAvrgAjaxList(IemAvrgVO iemAvrgVO) {
+		return selectList("IemAvrgDAO.selectIemAvrgAjaxList", iemAvrgVO);
+	}
 }

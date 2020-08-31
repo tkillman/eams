@@ -1,5 +1,6 @@
 package cpa.biz.sa.tm.service;
 
+import cpa.biz.sa.tm.model.EdcScreSearchVO;
 import cpa.biz.sa.tm.model.EdcScreVO;
 
 /**
@@ -27,9 +28,9 @@ public interface EdcScreService {
 	* Author : 김동규
 	* 교육성적표 조회한다.
 	*
-	* @param EdcScreVO - 조회할 정보가 담긴 EdcScreVO
+	* @param EdcScreSearchVO - 조회할 정보가 담긴 EdcScreSearchVO
 	* @return EdcScreVO
 	* @exception Exception
 	*/
-	public EdcScreVO searchEdcScre(EdcScreVO edcScreVO);
+	public EdcScreVO searchEdcScre(EdcScreSearchVO edcScreSearchVO);
 }

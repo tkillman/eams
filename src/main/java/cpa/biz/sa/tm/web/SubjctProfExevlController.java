@@ -39,8 +39,8 @@ public class SubjctProfExevlController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchSubjctProfExevlList(SubjctProfExevlVO subjctProfExevlVO) {
-		subjctProfExevlService.searchSubjctProfExevlList(subjctProfExevlVO);
+	public String searchSubjctProfExevlAjaxList(SubjctProfExevlVO subjctProfExevlVO) {
+		subjctProfExevlService.searchSubjctProfExevlAjaxList(subjctProfExevlVO);
 		return null;
 	}
 }

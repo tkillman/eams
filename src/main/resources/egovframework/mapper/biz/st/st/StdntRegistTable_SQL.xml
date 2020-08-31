@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stdntRegistTableDAO">
+        
+    <select id="selectStdntInfo" parameterType="String" resultType="cpa.biz.st.st.model.StdntRegistTableVO">
+        SELECT
+            ST.fnm
+            , ST.brthdy
+            , ST.moblphon
+            , ST.entsch_sttus_code AS entschSttusCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id='' AND CD.code = ST.entsch_sttus_code) AS entschSttusCodeNm
+            , ST.mrrg_at
+        FROM
+            tn_stdnt_info ST
+        WHERE 
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+        
+    <select id="selectStdntBassInfo" parameterType="String" resultType="cpa.biz.st.st.model.StdntRegistTableVO">
+        SELECT
+            ST.fnm
+            , ST.brthdy
+            , ST.moblphon
+            , ST.entsch_sttus_code
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id='' AND CD.code = ST.entsch_sttus_code) AS entschSttusCodeNm
+            , EI.cno
+            , ST.clas_uno AS clasUno
+            , (SELECT CLI.clas_nm FROM tn_clas_info CLI WHERE CLI.clas_uno = ST.clas_uno ) AS clasNm
+            , ST.stdnt_no 
+            , ST.apyexm_police_code AS apyexmPoliceCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST014' AND CD.code = ST.apyexm_police_code) AS apyexmPoliceCodeNm
+            , EI.crse_code AS crseCode
+            , (SELECT CRI.crse_nm FROM tn_crse_info CRI WHERE CRI.crse_code = EI.crse_code ) AS crseNm
+            , CBI.brckCodeNm 
+            , CBI.brckRoomCodeNm 
+            , CBI.sklstfFnm
+            , ST.chcrt_fnm 
+            , ST.eng_fnm 
+            , ST.mail
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST015' AND CD.code = ST.sexdstn_code ) AS sexdstnCodeNm
+            , ST.ownhom_cttpc 
+            , ST.insch_cttpc 
+            , ST.zip 
+            , ST.adres 
+        FROM
+            tn_stdnt_info ST
+            JOIN tn_cno_brck_info BI ON ST.brck_info_uno = BI.brck_info_uno 
+            JOIN tn_entsch_info EI ON BI.entsch_uno  = EI.entsch_uno,
+            (
+                SELECT 
+                    (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST001' AND CD.code = CBI.brck_code) AS brckCodeNm
+                    , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST040' AND CD.code = CBI.brckroom_code) AS brckRoomCodeNm
+                    , (SELECT SM.fnm FROM tn_sklstf_mastr SM WHERE SM.sklstf_uno = CBI.sklstf_uno ) AS sklstfFnm
+                FROM 
+                    tn_cno_brck_info CBI 
+                WHERE 
+                    ST.brck_info_uno  = CBI.brck_info_uno 
+            ) AS CBI
+        WHERE 
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+    <select id="selectIndvdlInfo" parameterType="String" resultType="cpa.biz.st.st.model.StdntRegistTableVO">
+        SELECT
+            ST.height
+            , ST.bdwgh 
+            , ST.left_crrc_vspr 
+            , ST.rght_crrc_vspr 
+            , ST.glss_wear_at 
+            , ST.bdp_code AS bdpCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST016' AND CD.code = ST.bdp_code) AS bdpCodeNm
+            , ST.spcabl_code AS spcablCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST010' AND CD.code = ST.spcabl_code) AS spcablCodeNm
+            , ST.hobby_code AS hobbyCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST011' AND CD.code = ST.hobby_code) AS hobbyCodeNm
+            , ST.relgn_code AS relgnCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST009' AND CD.code = ST.relgn_code) AS relgnCodeNm
+            , ST.smkng_code AS smkngCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST017' AND CD.code = ST.smkng_code) AS smkngCodeNm
+            , ST.dnpy_code AS dnpyCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST012' AND CD.code = ST.dnpy_code) AS dnpyCodeNm
+            , ST.charct_ty 
+            , ST.polc_apply_sync
+        FROM
+            tn_stdnt_info ST
+        WHERE 
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+    <select id="selectFrndList" parameterType="String" resultType="java.util.HashMap">
+        SELECT
+            FR.fnm AS frndFnm
+            , FR.age AS frndAge
+            , FR.relate_code AS relateCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = '' AND CD.code = FR.relate_code) AS frndRelateCodeNm
+            , FR.occp AS frndOccp
+            , FR.adres AS frndAdres
+        FROM
+            tn_stdnt_info ST
+        JOIN
+            tn_frnd_relate FR ON ST.stdnt_uno = FR.stdnt_uno
+        WHERE
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+    <select id="selectFamilyMatter" parameterType="String" resultType="java.util.HashMap">
+        SELECT
+            FM.family_relate_code AS familyRelateCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST002' AND CD.code = FM.family_relate_code) AS familyRelateCodeNm
+            , FM.fnm
+            , FM.age
+            , FM.acdmcr_code AS acdmcrCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST003' AND CD.code = FM.acdmcr_code) AS acdmcrCodeNm
+            , FM.occp_code AS occpCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = '' AND CD.code = FM.occp_code) AS occpCodeNm
+            , FM.occp_etc_nm AS occpEtcNm
+            , FM.polc_at AS polcAt
+            , FM.clss_code AS clssCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = '' AND CD.code = FM.clss_code) AS clssCodeNm
+            , FM.rspofc_code AS rspofcCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = '' AND CD.code = FM.rspofc_code) AS rspofcCodeNm
+            , FM.work_place AS workPlace
+            , FM.cttpc
+        FROM
+            tn_stdnt_info ST
+        JOIN
+            tn_family_matter FM ON ST.stdnt_uno = FM.stdnt_uno
+        WHERE
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+    <select id="selectAcdmcrMatter" parameterType="String" resultType="java.util.HashMap">
+        SELECT
+            SI.hbrd_se_code AS hbrdSeCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST018' AND CD.code = SI.hbrd_se_code) AS hbrdSeCodeNm
+            , SI.schul_se_code AS schulSeCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = 'ST019' AND CD.code = SI.schul_se_code) AS schulSeCodeNm
+            , SI.schul_nm AS schulNm
+            , SI.grdtn_year AS grdtnYear
+            , SI.adres
+            , SI.subjct_nm AS subjctNm
+            , SI.polsbj_relate_at AS polsbjRelateAt
+            , SI.stdntleader_career AS stdntleaderCareer
+            , SI.act_cn AS actCn
+            , SI.etc_info_cn AS etcInfoCn
+        FROM
+            tn_stdnt_info ST
+        JOIN
+            tn_sknrgs_info SI ON ST.stdnt_uno = SI.stdnt_uno
+        WHERE
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+    <select id="selectQualfLcns" parameterType="String" resultType="java.util.HashMap">
+    </select>
+    
+    <select id="selectCareerMatter" parameterType="String" resultType="java.util.HashMap">
+        SELECT
+            CM.jssfc_code AS jssfcCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id = '' AND CD.code = CM.jssfc_code) AS jssfcCodeNm
+            , CM.cmpny_nm AS cmpnyNm
+            , TO_CHAR(TO_DATE(CM.work_begin_ym, 'YYYYMMDD') , 'YYYY-MM-DD') AS workBeginYm
+            , TO_CHAR(TO_DATE(CM.work_end_ym, 'YYYYMMDD') , 'YYYY-MM-DD') AS workEndYm
+            , CM.rspofc_nm AS rspofcNm
+            , CM.adres
+        FROM
+            tn_stdnt_info ST
+        JOIN
+            tn_career_matter CM ON ST.stdnt_uno = CM.stdnt_uno
+        WHERE
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+    <select id="selectMtrscMatter" parameterType="String" resultType="cpa.biz.st.st.model.StdntRegistTableVO">
+        SELECT
+            ST.mtrsc_code 
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id='ST035' AND CD.code = ST.mtrsc_code ) AS mtrscAt
+            , ST.curimpt_nm AS curimptNm
+            , ST.clss_code AS clssCode
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id='ST004' AND CD.code = ST.clss_code ) AS clssCodeNm
+            , ST.ofcr_orgin_code  
+            , (SELECT CD.code_nm FROM tc_cmmn_detail CD WHERE CD.code_id='ST005' AND CD.code = ST.ofcr_orgin_code ) AS ofcrOrginCodeNm
+            , ST.ssn
+            , TO_CHAR(TO_DATE(ST.srvic_begin_de, 'YYYYMMDD'), 'YYYY-MM-DD') AS srvicBeginDe
+            , TO_CHAR(TO_DATE(ST.srvic_end_de, 'YYYYMMDD'), 'YYYY-MM-DD') AS srvicEndDe
+            , ST.rm
+            , ST.army_srvic_place AS armySrvicPlace
+        FROM
+            tn_stdnt_info ST
+        WHERE
+            ST.stdnt_uno = #{stdntUno}
+    </select>
+    
+</mapper>

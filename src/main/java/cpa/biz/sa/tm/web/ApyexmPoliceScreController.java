@@ -39,8 +39,8 @@ public class ApyexmPoliceScreController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchApyexmPoliceScreList(ApyexmPoliceScreVO apyexmPoliceScreVO) {
-		apyexmPoliceScreService.searchApyexmPoliceScreList(apyexmPoliceScreVO);
+	public String searchApyexmPoliceScreAjaxList(ApyexmPoliceScreVO apyexmPoliceScreVO) {
+		apyexmPoliceScreService.searchApyexmPoliceScreAjaxList(apyexmPoliceScreVO);
 		return null;
 	}
 	

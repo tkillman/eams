@@ -36,9 +36,9 @@ public class CrqfcAddpntCnfirmServiceImpl implements CrqfcAddpntCnfirmService {
 	CrqfcAddpntCnfirmDAO crqfcAddpntCnfirmDAO;
 	
 	@Override
-	public List<CrqfcAddpntCnfirmVO> searchCrqfcAddpntCnfirmList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO)
+	public List<CrqfcAddpntCnfirmVO> searchCrqfcAddpntCnfirmAjaxList(CrqfcAddpntCnfirmSearchVO crqfcAddpntCnfirmSearchVO)
 			throws Exception {
-		return crqfcAddpntCnfirmDAO.searchCrqfcAddpntCnfirmList(crqfcAddpntCnfirmSearchVO);
+		return crqfcAddpntCnfirmDAO.selectCrqfcAddpntCnfirmAjaxList(crqfcAddpntCnfirmSearchVO);
 	}
 
 }

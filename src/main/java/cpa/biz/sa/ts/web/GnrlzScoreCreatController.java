@@ -3,7 +3,7 @@ package cpa.biz.sa.ts.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import cpa.biz.sa.ts.model.GnrlzScoreCreatVO;
+import cpa.biz.sa.ts.model.GnrlzScoreCreatSearchVO;
 import cpa.biz.sa.ts.service.GnrlzScoreCreatService;
 
 /**
@@ -35,11 +35,11 @@ public class GnrlzScoreCreatController {
 	* Author : 김동규
 	* 종합점수생성 조회한다.
 	*
-	* @param GnrlzScoreCreatVO - 조회할 정보가 담긴 GnrlzScoreCreatVO
+	* @param GnrlzScoreCreatSearchVO - 조회할 정보가 담긴 GnrlzScoreCreatVO
 	* @return String
 	* @exception Exception
 	*/
-	public String searchGnrlzScoreCreatForm(GnrlzScoreCreatVO gnrlzScoreCreatVO) {
+	public String searchGnrlzScoreCreatForm(GnrlzScoreCreatSearchVO gnrlzScoreCreatVO) {
 		
 		return null;
 	}
@@ -48,11 +48,11 @@ public class GnrlzScoreCreatController {
 	* Author : 김동규
 	* 종합점수생성 수정한다.
 	*
-	* @param GnrlzScoreCreatVO - 조회할 정보가 담긴 GnrlzScoreCreatVO
+	* @param GnrlzScoreCreatSearchVO - 조회할 정보가 담긴 GnrlzScoreCreatVO
 	* @return String
 	* @exception Exception
 	*/
-	public String updateGnrlzScoreCreat(GnrlzScoreCreatVO gnrlzScoreCreatVO) {
+	public String updateGnrlzScoreCreat(GnrlzScoreCreatSearchVO gnrlzScoreCreatVO) {
 		gnrlzScoreCreatService.updateGnrlzScoreCreat(gnrlzScoreCreatVO);
 		return null;
 	}

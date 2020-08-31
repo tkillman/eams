@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="cpa.biz.sa.ts.web.CrqfcAcqsUploadController" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/web/CrqfcAcqsUploadController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="432" y="-97"/>    
+    <position height="-1" width="-1" x="413" y="-198"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="cpa.biz.sa.ts.service.CrqfcAcqsUploadService" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/service/CrqfcAcqsUploadService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="437" y="53"/>    
+    <position height="-1" width="-1" x="435" y="-2"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -22,7 +22,7 @@
   <class id="3" language="java" name="cpa.biz.sa.ts.service.impl.CrqfcAcqsUploadServiceImpl" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/service/impl/CrqfcAcqsUploadServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="440" y="191"/>    
+    <position height="-1" width="-1" x="436" y="338"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -31,7 +31,7 @@
   </class>  
   <class id="4" language="java" name="cpa.biz.sa.ts.model.CrqfcAcqsUploadVO" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/model/CrqfcAcqsUploadVO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="804" y="-42"/>    
+    <position height="-1" width="-1" x="984" y="-46"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -40,39 +40,39 @@
   </class>  
   <class id="5" language="java" name="cpa.biz.sa.ts.dao.CrqfcAcqsUploadDAO" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/dao/CrqfcAcqsUploadDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="805" y="192"/>    
+    <position height="-1" width="-1" x="1019" y="276"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="6">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="7">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="8" name="crqfcAcqsUploadService">        
-        <position height="0" width="0" x="27" y="-173"/>      
-      </attribute>      
-      <multiplicity id="9" minimum="0" maximum="1">        
-        <position height="0" width="0" x="27" y="-173"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="10">    
+  <association id="6">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="11" name="crqfcAcqsUploadDAO">        
-        <position height="0" width="0" x="11" y="-162"/>      
+      <attribute id="7" name="crqfcAcqsUploadDAO">        
+        <position height="0" width="0" x="225" y="-78"/>      
       </attribute>      
-      <multiplicity id="12" minimum="0" maximum="1">        
-        <position height="0" width="0" x="11" y="-162"/>      
+      <multiplicity id="8" minimum="0" maximum="1">        
+        <position height="0" width="0" x="225" y="-78"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="9">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="10">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="11" name="crqfcAcqsUploadService">        
+        <position height="0" width="0" x="25" y="-228"/>      
+      </attribute>      
+      <multiplicity id="12" minimum="0" maximum="1">        
+        <position height="0" width="0" x="25" y="-228"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

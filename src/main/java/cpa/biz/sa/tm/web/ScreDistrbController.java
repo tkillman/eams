@@ -3,6 +3,7 @@ package cpa.biz.sa.tm.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import cpa.biz.sa.tm.model.ScreDistrbSearchVO;
 import cpa.biz.sa.tm.model.ScreDistrbVO;
 import cpa.biz.sa.tm.service.ScreDistrbService;
 
@@ -35,12 +36,12 @@ public class ScreDistrbController {
 	* Author : 김동규
 	* 성적분포표 목록조회한다.
 	*
-	* @param ScreDistrbVO - 조회할 정보가 담긴 ScreDistrbServiceVO
+	* @param ScreDistrbSearchVO - 조회할 정보가 담긴 ScreDistrbSearchVO
 	* @return String
 	* @exception Exception
 	*/
-	public String searchScreDistrbList(ScreDistrbVO screDistrbServiceVO) {
-		screDistrbService.searchScreDistrbList(screDistrbServiceVO);
+	public String searchScreDistrbAjaxList(ScreDistrbSearchVO screDistrbSearchVO) {
+		screDistrbService.searchScreDistrbAjaxList(screDistrbSearchVO);
 		return null;
 	}
 	

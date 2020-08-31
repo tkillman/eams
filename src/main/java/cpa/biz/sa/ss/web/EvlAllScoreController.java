@@ -39,9 +39,9 @@ public class EvlAllScoreController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchEvlAllScore(EvlAllScoreVO evlAllScoreVO) {
+	public String searchEvlAllScoreAjaxList(EvlAllScoreVO evlAllScoreVO) {
 		
-		evlAllScoreService.searchEvlAllScore(evlAllScoreVO);
+		evlAllScoreService.searchEvlAllScoreAjaxList(evlAllScoreVO);
 		return null;
 	}
 	

@@ -34,9 +34,9 @@ public class IndvdlScoreInqireServiceImpl implements IndvdlScoreInqireService {
 	IndvdlScoreInqireDAO indvdlScoreInqireDAO;
 	
 	@Override
-	public IndvdlScoreInqireVO searchIndvdlScoreInqire(IndvdlScoreInqireSearchVO indvdlScoreInqireSearchVO) {
+	public IndvdlScoreInqireVO searchIndvdlScoreInqireDetail(IndvdlScoreInqireSearchVO indvdlScoreInqireSearchVO) {
 		
-		return indvdlScoreInqireDAO.searchIndvdlScoreInqire(indvdlScoreInqireSearchVO);
+		return indvdlScoreInqireDAO.selectIndvdlScoreInqireDetail(indvdlScoreInqireSearchVO);
 	}
 
 }

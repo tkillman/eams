@@ -40,9 +40,9 @@ public class SylbsScoreInqireController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchSylbsScoreInqireList(SylbsScoreInqireSearchVO sylbsScoreInqireSearchVO) throws Exception {
+	public String searchSylbsScoreInqireAjaxList(SylbsScoreInqireSearchVO sylbsScoreInqireSearchVO) throws Exception {
 		
-		sylbsScoreInqireService.searchSylbsScoreInqireList(sylbsScoreInqireSearchVO);
+		sylbsScoreInqireService.searchSylbsScoreInqireAjaxList(sylbsScoreInqireSearchVO);
 		return null;
 	}
 	

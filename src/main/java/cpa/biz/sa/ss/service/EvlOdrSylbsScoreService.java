@@ -34,5 +34,5 @@ public interface EvlOdrSylbsScoreService {
 	* @return List<EvlOdrSylbsScoreVO>
 	* @exception Exception
 	*/
-	public List<EvlOdrSylbsScoreVO> searchEvlOdrSylbsScoreList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO) throws Exception;
+	public List<EvlOdrSylbsScoreVO> searchEvlOdrSylbsScoreAjaxList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO) throws Exception;
 }

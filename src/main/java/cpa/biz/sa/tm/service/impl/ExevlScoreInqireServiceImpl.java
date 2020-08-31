@@ -35,10 +35,9 @@ public class ExevlScoreInqireServiceImpl implements ExevlScoreInqireService {
 	ExevlScoreInqireDAO exevlScoreInqireDAO;
 	
 	@Override
-	public List<ExevlScoreInqireVO> searchExevlScoreInqireList(ExevlScoreInqireVO exevlScoreInqireVO) {
+	public List<ExevlScoreInqireVO> searchExevlScoreInqireAjaxList(ExevlScoreInqireVO exevlScoreInqireVO) {
 		
-		exevlScoreInqireDAO.selectList("ExevlScoreInqireDAO.searchExevlScoreInqireList", exevlScoreInqireVO);
-		return null;
+		return exevlScoreInqireDAO.selectExevlScoreInqireAjaxList(exevlScoreInqireVO);
 	}
 
 	@Override

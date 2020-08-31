@@ -18,7 +18,7 @@
 		<property name="egovBasenames">
 			<list>
 				<value>classpath*:/egovframework/message/**/*</value>
-				<value>classpath:/egovframework/egovProps/globals</value>
+				<value>classpath:/egovframework/egovProps/globals_${spring.profiles.active}</value>
 				<!-- 확인된 모든 경로를 추가해준다 -->
                 <value>classpath:/egovframework/message/message-common</value>
                 <value>classpath:/egovframework/message/cmm/message-common</value>

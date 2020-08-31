@@ -1,7 +1,11 @@
 package cpa.biz.sa.tm.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.GrdtnLackCurstatSearchVO;
+import cpa.biz.sa.tm.model.GrdtnLackCurstatVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -26,4 +30,8 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("GrdtnLackCurstatDAO")
 public class GrdtnLackCurstatDAO extends EgovComAbstractDAO{
 
+	public List<GrdtnLackCurstatVO> selectGrdtnLackCurstatList(GrdtnLackCurstatSearchVO grdtnLackCurstatSearchVO){
+		return selectList("GrdtnLackCurstatDAO.selectGrdtnLackCurstatList", grdtnLackCurstatSearchVO);
+	}
+	
 }

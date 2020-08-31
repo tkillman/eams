@@ -1,7 +1,13 @@
 package cpa.biz.sa.ts.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.ts.model.CmmnTnEntschInfoVO;
+import cpa.biz.sa.ts.model.CmmnTnIemInfoVO;
+import cpa.biz.sa.ts.model.CmmnTnRealmInfoVO;
+import cpa.biz.sa.ts.model.CmmnTnSbjectInfoVO;
 import cpa.biz.sa.ts.model.EvlScoreUploadVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
@@ -31,4 +37,47 @@ public class EvlScoreUploadDAO extends EgovComAbstractDAO{
 		return update("EvlScoreUploadDAO.updateEvlScoreUploadExcel", evlScoreUploadVO);
 	}
 	
+	/**
+	* Author : 김동규
+	* 기수 목록조회한다.
+	*
+	* @return List<CmmnTnEntschInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnEntschInfoVO> selectTnEntschInfoAjaxList() {
+		return selectList("EvlScoreUploadDAO.selectTnEntschInfoAjaxList");
+	}
+	
+	/**
+	* Author : 김동규
+	* 분야 목록조회한다.
+	*
+	* @return List<CmmnTnIemInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnIemInfoVO> selectTnIemInfoAjaxList() {
+		return selectList("EvlScoreUploadDAO.selectTnIemInfoAjaxList");
+	}
+	
+	/**
+	* Author : 김동규
+	* 항목 목록조회한다.
+	*
+	* @return List<CmmnTnRealmInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnRealmInfoVO> selectTnRealmInfoAjaxList() {
+		return selectList("EvlScoreUploadDAO.selectTnRealmInfoAjaxList");
+	}
+
+	/**
+	* Author : 김동규
+	* 과목 목록조회한다.
+	*
+	* @return List<CmmnTnSbjectInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnSbjectInfoVO> selectTnSbjectInfoAjaxList() {
+		return selectList("EvlScoreUploadDAO.selectTnSbjectInfoAjaxList");
+	}
 }

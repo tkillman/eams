@@ -45,7 +45,7 @@ public class EgovProperties {
 
 	//파일구분자
 	final static  String FILE_SEPARATOR = System.getProperty("file.separator");
-
+	final static  String profile = System.getProperty("spring.profiles.active");
 	//프로퍼티 파일의 물리적 위치
 	//public static final String GLOBALS_PROPERTIES_FILE = System.getProperty("user.home") + FILE_SEPARATOR + "egovProps" +FILE_SEPARATOR + "globals.properties";
 
@@ -56,7 +56,7 @@ public class EgovProperties {
 
 	public static final String RELATIVE_PATH_PREFIX = EgovProperties.class.getResource("").getPath().substring(0, EgovProperties.class.getResource("").getPath().lastIndexOf("cpa"));
 
-	public static final String GLOBALS_PROPERTIES_FILE = RELATIVE_PATH_PREFIX + "/egovframework/egovProps" + FILE_SEPARATOR + "globals.properties";
+	public static final String GLOBALS_PROPERTIES_FILE = RELATIVE_PATH_PREFIX + "/egovframework/egovProps" + FILE_SEPARATOR + "globals_"+ profile +".properties";
 	//public static final String GLOBALS_PROPERTIES_FILE = EgovProperties.class.getResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals.properties").getPath();
 	
 	/**
@@ -66,8 +66,8 @@ public class EgovProperties {
 	 */
 	public static String getPathProperty(String keyName) {
 		String value = "";
-		
-		ClassPathResource resource = new ClassPathResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals.properties");
+		//String profile = System.getProperty("spring.profiles.active");
+		ClassPathResource resource = new ClassPathResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals_"+ profile +".properties");
 		LOGGER.debug("getPathProperty : {} = {}", GLOBALS_PROPERTIES_FILE, keyName);
 		
 		//FileInputStream fis = null;
@@ -102,10 +102,10 @@ public class EgovProperties {
 	 */
 	public static String getProperty(String keyName) {
 		String value = "";
-		
+		//String profile = System.getProperty("spring.profiles.active");
 		LOGGER.debug("===>>> getProperty"+EgovProperties.class.getProtectionDomain().getCodeSource().getLocation().getPath());
 		LOGGER.debug("getProperty : {} = {}", GLOBALS_PROPERTIES_FILE, keyName);
-		ClassPathResource resource = new ClassPathResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals.properties");
+		ClassPathResource resource = new ClassPathResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals_"+ profile +".properties");
 		//FileInputStream fis = null;
 				InputStream is = null;
 		try {
@@ -138,7 +138,8 @@ public class EgovProperties {
 	 * @return String
 	 */
 	public static String getPathProperty(String fileName, String key) {
-		ClassPathResource resource = new ClassPathResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals.properties");
+		//String profile = System.getProperty("spring.profiles.active");
+		ClassPathResource resource = new ClassPathResource("/egovframework/egovProps" + FILE_SEPARATOR + "globals_"+ profile +".properties");
 		//FileInputStream fis = null;
 		InputStream is = null;
 		try {

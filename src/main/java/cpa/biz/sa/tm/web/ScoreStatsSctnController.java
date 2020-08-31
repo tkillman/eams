@@ -40,9 +40,9 @@ public class ScoreStatsSctnController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchScoreStatsSctnList(ScoreStatsSctnVO scoreStatsSctnVO) {
+	public String searchScoreStatsSctnAjaxList(ScoreStatsSctnVO scoreStatsSctnVO) {
 		
-		scoreStatsSctnService.searchScoreStatsSctnList(scoreStatsSctnVO);
+		scoreStatsSctnService.searchScoreStatsSctnAjaxList(scoreStatsSctnVO);
 		return null;
 	}
 	

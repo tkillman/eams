@@ -2,6 +2,7 @@ package cpa.biz.sa.tm.service;
 
 import java.util.List;
 
+import cpa.biz.sa.tm.model.GrdtnLackCurstatSearchVO;
 import cpa.biz.sa.tm.model.GrdtnLackCurstatVO;
 
 /**
@@ -33,5 +34,5 @@ public interface GrdtnLackCurstatService {
 	* @return List<GrdtnLackCurstatVO>
 	* @exception Exception
 	*/
-	public List<GrdtnLackCurstatVO> searchGrdtnLackCurstatList(GrdtnLackCurstatVO grdtnLackCurstatVO);
+	public List<GrdtnLackCurstatVO> searchGrdtnLackCurstatAjaxList(GrdtnLackCurstatSearchVO grdtnLackCurstatSearchVO);
 }

@@ -39,8 +39,8 @@ public class GnrlzScoreInqireController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchGnrlzScoreInqireList(GnrlzScoreInqireVO gnrlzScoreInqireVO) {
-		gnrlzScoreInqireService.searchGnrlzScoreInqireList(gnrlzScoreInqireVO);
+	public String searchGnrlzScoreInqireAjaxList(GnrlzScoreInqireVO gnrlzScoreInqireVO) {
+		gnrlzScoreInqireService.searchGnrlzScoreInqireAjaxList(gnrlzScoreInqireVO);
 		return null;
 	}
 	

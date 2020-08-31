@@ -5,9 +5,9 @@
 	<mvc:resources mapping="/images/**" location="/images/" cache-period="259200"/>
 	<mvc:resources mapping="/js/**" location="/js/" cache-period="259200"/>
 	<mvc:resources mapping="/upload/**" location="/upload/" cache-period="259200"/>
-	<mvc:resources mapping="/jasmine/**" location="/jasmine/" cache-period="259200"/>
+	<mvc:resources mapping="/file/**" location="/file/" cache-period="259200"/>
 	
-	<context:component-scan base-package="cpa, egovframework, jasmine">
+	<context:component-scan base-package="cpa, egovframework">
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
@@ -15,20 +15,18 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 	</context:component-scan>
 	
-	<!-- For Pagination Tag -->
-	<bean class="cpa.cmm.ImagePaginationRenderer" id="imageRenderer"/>
-
-	<bean class="egovframework.rte.ptl.mvc.tags.ui.pagination.DefaultPaginationManager" id="paginationManager">
-		<property name="rendererType">
-			<map>
-				<entry key="image" value-ref="imageRenderer"/>
-			</map>
-		</property>
-	</bean>
-
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="webBindingInitializer">
             <bean class="cpa.cmm.web.EgovBindingInitializer"/>
+        </property>
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            </list>
         </property>
     </bean>
     
@@ -56,7 +54,7 @@
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver" p:order="2" p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" p:viewClass="org.springframework.web.servlet.view.JstlView"/>
 		  
 	<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" id="jsonView">
-		<property name="contentType" value="text/html;charset=UTF-8"/>
+		<property name="contentType" value="application/json; charset=UTF-8"></property>
 	</bean>
 	
    <!-- Tiles -->

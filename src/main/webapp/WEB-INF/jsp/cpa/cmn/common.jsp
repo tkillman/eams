@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="/css/com.css">
 
 <!-- 공통JS -->
-<script src="<c:url value='/js/jquery-1.5.min.js' />"></script>
+<script src="<c:url value='/js/jquery-1.12.4.min.js' />"></script>
 <script src="<c:url value='/js/common.js' />"></script>
 
 <script>

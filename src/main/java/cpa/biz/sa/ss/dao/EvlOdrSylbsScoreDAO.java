@@ -30,8 +30,8 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("EvlOdrSylbsScoreDAO")
 public class EvlOdrSylbsScoreDAO extends EgovComAbstractDAO{
 	
-	public List<EvlOdrSylbsScoreVO> searchEvlOdrSylbsScoreList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO){
-		return selectList("EvlOdrSylbsScoreDAO.searchEvlOdrSylbsScoreList", evlOdrSylbsScoreSearchVO);
+	public List<EvlOdrSylbsScoreVO> selectEvlOdrSylbsScoreAjaxList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO){
+		return selectList("EvlOdrSylbsScoreDAO.selectEvlOdrSylbsScoreAjaxList", evlOdrSylbsScoreSearchVO);
 	}
 	
 }

@@ -1,7 +1,10 @@
 package cpa.biz.sa.tm.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.ScoreStatsSctnVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -26,4 +29,19 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("ScoreStatsSctnDAO")
 public class ScoreStatsSctnDAO extends EgovComAbstractDAO{
 
+	public List<ScoreStatsSctnVO> selectScoreStatsSctnAjaxList(ScoreStatsSctnVO scoreStatsSctnVO) {
+		return selectList("ScoreStatsSctnDAO.selectScoreStatsSctnAjaxList", scoreStatsSctnVO);
+	}
+	
+	public int insertScoreStatsSctn(ScoreStatsSctnVO scoreStatsSctnVO) {
+		return insert("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
+	}
+	
+	public int updateScoreStatsSctn(ScoreStatsSctnVO scoreStatsSctnVO) {
+		return update("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
+	}
+	
+	public int deleteScoreStatsSctn(ScoreStatsSctnVO scoreStatsSctnVO) {
+		return delete("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
+	}
 }

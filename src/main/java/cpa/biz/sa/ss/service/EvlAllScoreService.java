@@ -33,6 +33,6 @@ public interface EvlAllScoreService {
 	* @return List<EvlAllScoreVO>
 	* @exception Exception
 	*/
-	public List<EvlAllScoreVO> searchEvlAllScore(EvlAllScoreVO evlAllScoreVO);
+	public List<EvlAllScoreVO> searchEvlAllScoreAjaxList(EvlAllScoreVO evlAllScoreVO);
 	
 }

@@ -1,6 +1,6 @@
 package cpa.biz.sa.ts.service;
 
-import cpa.biz.sa.ts.model.GnrlzScoreCreatVO;
+import cpa.biz.sa.ts.model.GnrlzScoreCreatSearchVO;
 
 /**
 * 
@@ -27,9 +27,9 @@ public interface GnrlzScoreCreatService {
 	* Author : 김동규
 	* 종합점수생성 수정한다.
 	*
-	* @param GnrlzScoreCreatVO - 조회할 정보가 담긴 GnrlzScoreCreatVO
+	* @param GnrlzScoreCreatSearchVO - 조회할 정보가 담긴 GnrlzScoreCreatVO
 	* @return int
 	* @exception Exception
 	*/
-	public int updateGnrlzScoreCreat(GnrlzScoreCreatVO gnrlzScoreCreatVO);
+	public int updateGnrlzScoreCreat(GnrlzScoreCreatSearchVO gnrlzScoreCreatVO);
 }

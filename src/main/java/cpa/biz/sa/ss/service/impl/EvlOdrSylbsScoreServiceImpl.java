@@ -36,9 +36,9 @@ public class EvlOdrSylbsScoreServiceImpl implements EvlOdrSylbsScoreService {
 	EvlOdrSylbsScoreDAO evlOdrSylbsScoreDAO;
 	
 	@Override
-	public List<EvlOdrSylbsScoreVO> searchEvlOdrSylbsScoreList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO) throws Exception {
+	public List<EvlOdrSylbsScoreVO> searchEvlOdrSylbsScoreAjaxList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO) throws Exception {
 		
-		return evlOdrSylbsScoreDAO.searchEvlOdrSylbsScoreList(evlOdrSylbsScoreSearchVO);
+		return evlOdrSylbsScoreDAO.selectEvlOdrSylbsScoreAjaxList(evlOdrSylbsScoreSearchVO);
 	}
 	
 }

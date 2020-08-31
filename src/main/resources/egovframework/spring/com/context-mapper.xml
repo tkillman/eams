@@ -13,6 +13,7 @@
 		<property name="mapperLocations">
 			<list>
 				<value>classpath:/egovframework/mapper/biz/**/**/*_SQL.xml</value>
+				<value>classpath:/egovframework/mapper/cmm/*_SQL.xml</value>
 			</list>
 		</property>
 	</bean>

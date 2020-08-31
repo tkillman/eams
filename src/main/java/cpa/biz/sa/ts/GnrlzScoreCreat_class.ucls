@@ -1,72 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="cpa.biz.co.ts.web.GnrlzScoreCreatController" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/ts/web/GnrlzScoreCreatController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="142" width="352" x="212" y="59"/>    
+  <class id="1" language="java" name="cpa.biz.sa.ts.web.GnrlzScoreCreatController" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ts/web/GnrlzScoreCreatController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="352" x="153" y="-7"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="cpa.biz.co.ts.service.GnrlzScoreCreatService" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/ts/service/GnrlzScoreCreatService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="302" x="225" y="260"/>    
+  <interface id="2" language="java" name="cpa.biz.sa.ts.service.GnrlzScoreCreatService" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ts/service/GnrlzScoreCreatService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="330" y="197"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="cpa.biz.co.ts.service.impl.GnrlzScoreCreatServiceImpl" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/ts/service/impl/GnrlzScoreCreatServiceImpl.java" binary="false" 
+  <class id="3" language="java" name="cpa.biz.sa.ts.service.impl.GnrlzScoreCreatServiceImpl" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ts/service/impl/GnrlzScoreCreatServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="124" width="302" x="226" y="386"/>    
+    <position height="-1" width="-1" x="327" y="329"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="cpa.biz.co.ts.dao.GnrlzScoreCreatDAO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/ts/dao/GnrlzScoreCreatDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="176" x="646" y="395"/>    
+  <class id="4" language="java" name="cpa.biz.sa.ts.dao.GnrlzScoreCreatDAO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ts/dao/GnrlzScoreCreatDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="630" y="318"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="cpa.biz.co.ts.model.GnrlzScoreCreatVO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/ts/model/GnrlzScoreCreatVO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="165" x="661" y="182"/>    
+  <class id="5" language="java" name="cpa.biz.sa.ts.model.GnrlzScoreCreatSearchVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ts/model/GnrlzScoreCreatSearchVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="647" y="123"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="6">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="7" name="gnrlzScoreCreatService"/>      
-      <multiplicity id="8" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="9">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="10" name="gnrlzScoreCreatDAO"/>      
-      <multiplicity id="11" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="12">    
+  <realization id="6">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="gnrlzScoreCreatService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="9" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="10">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="11" name="gnrlzScoreCreatDAO">        
+        <position height="0" width="0" x="29" y="0"/>      
+      </attribute>      
+      <multiplicity id="12" minimum="0" maximum="1">        
+        <position height="0" width="0" x="29" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

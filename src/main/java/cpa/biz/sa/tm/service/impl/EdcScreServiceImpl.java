@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import cpa.biz.sa.tm.dao.EdcScreDAO;
+import cpa.biz.sa.tm.model.EdcScreSearchVO;
 import cpa.biz.sa.tm.model.EdcScreVO;
 import cpa.biz.sa.tm.service.EdcScreService;
 
@@ -33,8 +34,9 @@ public class EdcScreServiceImpl implements EdcScreService{
 	EdcScreDAO edcScreDAO;
 	
 	@Override
-	public EdcScreVO searchEdcScre(EdcScreVO edcScreVO) {
-		edcScreDAO.selectOne("EdcScreDAO.searchEdcScre", edcScreVO);
+	public EdcScreVO searchEdcScre(EdcScreSearchVO edcScreSearchVO) {
+		edcScreDAO.selectOne("EdcScreDAO.searchEdcScre", edcScreSearchVO);
+		edcScreDAO.searchEdcScre(edcScreSearchVO);
 		return null;
 	}
 

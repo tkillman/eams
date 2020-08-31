@@ -12,6 +12,7 @@ import cpa.biz.co.ma.dao.MainDAO;
 import cpa.biz.co.ma.model.MainVO;
 import cpa.biz.co.ma.service.MainService;
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
 * 
@@ -38,23 +39,41 @@ public class MainServiceImpl extends EgovAbstractServiceImpl implements MainServ
 	
 	@Resource(name = "MainDAO")
     private MainDAO mainDao;
-	
-	/**
-	* 공지사항를 조회한다.
-	* @param MainVO
-	* @return
-	*/	
+
 	@Override
 	public Map<String, Object> selectBbsList(MainVO mainVO) {
+		
+		PaginationInfo paginationInfo = new PaginationInfo();
+		
+		paginationInfo.setCurrentPageNo(mainVO.getPageIndex());
+		paginationInfo.setRecordCountPerPage(mainVO.getPageUnit());
+		paginationInfo.setPageSize(mainVO.getPageSize());
+	
+		mainVO.setFirstIndex(paginationInfo.getFirstRecordIndex());
+		mainVO.setLastIndex(paginationInfo.getLastRecordIndex());
+		mainVO.setRecordCountPerPage(paginationInfo.getRecordCountPerPage());
+		
 		List<?> list = mainDao.selectBbsList(mainVO);
-
 		int cnt = mainDao.selectBbsListCnt(mainVO);
-
+		
+		paginationInfo.setTotalRecordCount(cnt);
+		
 		Map<String, Object> map = new HashMap<String, Object>();
 
 		map.put("resultList", list);
 		map.put("resultCnt", Integer.toString(cnt));
+		map.put("paginationInfo", paginationInfo);
 
 		return map;
+	}
+	
+	@Override
+	public MainVO loginProc(MainVO mainVO) {
+		return mainDao.loginProc(mainVO);
+	}
+	
+	@Override
+	public MainVO searchPassword(MainVO mainVO) {
+		return mainDao.searchPassword(mainVO);
 	}
 }

@@ -35,10 +35,10 @@ public class ApyexmPoliceScreServiceImpl implements ApyexmPoliceScreService {
 	ApyexmPoliceScreDAO apyexmPoliceScreDAO;
 	
 	@Override
-	public List<ApyexmPoliceScreVO> searchApyexmPoliceScreList(ApyexmPoliceScreVO apyexmPoliceScreVO) {
+	public List<ApyexmPoliceScreVO> searchApyexmPoliceScreAjaxList(ApyexmPoliceScreVO apyexmPoliceScreVO) {
 		
 		apyexmPoliceScreDAO.selectList("ApyexmPoliceScreDAO.searchApyexmPoliceScreList", apyexmPoliceScreVO);
-		return null;
+		return apyexmPoliceScreDAO.selectApyexmPoliceScreAjaxList(apyexmPoliceScreVO);
 	}
 
 }

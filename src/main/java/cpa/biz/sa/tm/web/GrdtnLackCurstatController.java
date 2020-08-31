@@ -3,6 +3,7 @@ package cpa.biz.sa.tm.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import cpa.biz.sa.tm.model.GrdtnLackCurstatSearchVO;
 import cpa.biz.sa.tm.model.GrdtnLackCurstatVO;
 import cpa.biz.sa.tm.service.GrdtnLackCurstatService;
 
@@ -39,8 +40,8 @@ public class GrdtnLackCurstatController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchGrdtnLackCurstatList(GrdtnLackCurstatVO grdtnLackCurstatVO) {
-		grdtnLackCurstatService.searchGrdtnLackCurstatList(grdtnLackCurstatVO);
+	public String searchGrdtnLackCurstatAjaxList(GrdtnLackCurstatSearchVO grdtnLackCurstatSearchVO) {
+		grdtnLackCurstatService.searchGrdtnLackCurstatAjaxList(grdtnLackCurstatSearchVO);
 		return null;
 	}
 	

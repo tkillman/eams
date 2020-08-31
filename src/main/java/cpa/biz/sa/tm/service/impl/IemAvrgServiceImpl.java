@@ -35,9 +35,9 @@ public class IemAvrgServiceImpl implements IemAvrgService{
 	IemAvrgDAO iemAvrgDAO;
 	
 	@Override
-	public List<IemAvrgVO> searchIemAvrgList(IemAvrgVO iemAvrgVO) {
-		iemAvrgDAO.selectList("IemAvrgDAO.searchIemAvrgList", iemAvrgVO);
-		return null;
+	public List<IemAvrgVO> searchIemAvrgAjaxList(IemAvrgVO iemAvrgVO) {
+		
+		return iemAvrgDAO.selectIemAvrgAjaxList(iemAvrgVO);
 	}
 
 }

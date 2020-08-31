@@ -33,7 +33,7 @@ public interface ExevlScoreInqireService {
 	* @return List<ExevlScoreInqireVO>
 	* @exception Exception
 	*/
-	public List<ExevlScoreInqireVO> searchExevlScoreInqireList(ExevlScoreInqireVO exevlScoreInqireVO);
+	public List<ExevlScoreInqireVO> searchExevlScoreInqireAjaxList(ExevlScoreInqireVO exevlScoreInqireVO);
 	
 	/**
 	* Author : 김동규

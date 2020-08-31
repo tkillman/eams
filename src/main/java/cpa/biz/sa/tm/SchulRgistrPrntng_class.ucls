@@ -1,72 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="cpa.biz.co.tm.web.SchulRgistrPrntngController" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/web/SchulRgistrPrntngController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="328" x="361" y="55"/>    
+  <class id="1" language="java" name="cpa.biz.sa.tm.web.SchulRgistrPrntngController" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/web/SchulRgistrPrntngController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="328" x="118" y="41"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="cpa.biz.co.tm.service.SchulRgistrPrntngService" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/service/SchulRgistrPrntngService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="455" x="292" y="193"/>    
+  <interface id="2" language="java" name="cpa.biz.sa.tm.service.SchulRgistrPrntngService" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/service/SchulRgistrPrntngService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="311" y="234"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="cpa.biz.co.tm.service.impl.SchulRgistrPrntngServiceImpl" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/service/impl/SchulRgistrPrntngServiceImpl.java" binary="false" 
+  <class id="3" language="java" name="cpa.biz.sa.tm.service.impl.SchulRgistrPrntngServiceImpl" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/service/impl/SchulRgistrPrntngServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="124" width="455" x="307" y="314"/>    
+    <position height="-1" width="-1" x="295" y="367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="cpa.biz.co.tm.dao.SchulRgistrPrntngDAO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/dao/SchulRgistrPrntngDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="187" x="892" y="331"/>    
+  <class id="4" language="java" name="cpa.biz.sa.tm.model.SchulRgistrPrntngVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/model/SchulRgistrPrntngVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="877" y="79"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="cpa.biz.co.tm.model.SchulRgistrPrntngVO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/model/SchulRgistrPrntngVO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="176" x="818" y="94"/>    
+  <class id="5" language="java" name="cpa.biz.sa.tm.model.SchulRgistrPrntngSearchVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/model/SchulRgistrPrntngSearchVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="667" y="199"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="6">    
+  <class id="6" language="java" name="cpa.biz.sa.tm.dao.SchulRgistrPrntngDAO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/dao/SchulRgistrPrntngDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="652" y="418"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="cpa.biz.sa.ss.model.CmmnTnEvlScoreVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ss/model/CmmnTnEvlScoreVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="889" y="464"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="8">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="9" name="schulRgistrPrntngService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="10" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="12">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="13" name="schulRgistrPrntngDAO">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="14" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <realization id="15">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <association id="7">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="8" name="schulRgistrPrntngService"/>      
-      <multiplicity id="9" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="10">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="11" name="schulRgistrPrntngDAO"/>      
-      <multiplicity id="12" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

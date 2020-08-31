@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import cpa.biz.sa.ts.dao.LastScoreUpdtDAO;
+import cpa.biz.sa.ts.model.LastScoreUpdtSearchVO;
 import cpa.biz.sa.ts.model.LastScoreUpdtVO;
 import cpa.biz.sa.ts.service.LastScoreUpdtService;
 
@@ -33,9 +34,8 @@ public class LastScoreUpdtServiceImpl implements LastScoreUpdtService {
 	LastScoreUpdtDAO lastScoreUpdtDAO;
 	
 	@Override
-	public LastScoreUpdtVO searchLastScoreUpdt(LastScoreUpdtVO lastScoreUpdtVO) {
-		lastScoreUpdtDAO.selectOne("LastScoreUpdtDAO.searchLastScoreUpdt", lastScoreUpdtVO);
-		return null;
+	public LastScoreUpdtVO searchLastScoreUpdt(LastScoreUpdtSearchVO lastScoreUpdtSearchVO) {
+		return lastScoreUpdtDAO.searchLastScoreUpdt(lastScoreUpdtSearchVO);
 	}
 
 	@Override

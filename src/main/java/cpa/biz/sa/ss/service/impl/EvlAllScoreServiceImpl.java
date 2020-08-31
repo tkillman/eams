@@ -35,9 +35,9 @@ public class EvlAllScoreServiceImpl implements EvlAllScoreService {
 	EvlAllScoreDAO evlAllScoreDAO;
 	
 	@Override
-	public List<EvlAllScoreVO> searchEvlAllScore(EvlAllScoreVO evlAllScoreVO) {
-		evlAllScoreDAO.selectList("EvlAllScoreDAO.searchEvlAllScore");
-		return null;
+	public List<EvlAllScoreVO> searchEvlAllScoreAjaxList(EvlAllScoreVO evlAllScoreVO) {
+		
+		return evlAllScoreDAO.selectEvlAllScoreAjaxList(evlAllScoreVO);
 	}
 
 }

@@ -33,7 +33,7 @@ public interface GnrlzScoreInqireService {
 	* @return List<GnrlzScoreInqireVO>
 	* @exception Exception
 	*/
-	public List<GnrlzScoreInqireVO> searchGnrlzScoreInqireList(GnrlzScoreInqireVO gnrlzScoreInqireVO);
+	public List<GnrlzScoreInqireVO> searchGnrlzScoreInqireAjaxList(GnrlzScoreInqireVO gnrlzScoreInqireVO);
 	
 	/**
 	* Author : 김동규

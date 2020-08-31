@@ -39,8 +39,8 @@ public class IemAvrgController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchIemAvrgList(IemAvrgVO iemAvrgVO) {
-		iemAvrgService.searchIemAvrgList(iemAvrgVO);
+	public String searchIemAvrgAjaxList(IemAvrgVO iemAvrgVO) {
+		iemAvrgService.searchIemAvrgAjaxList(iemAvrgVO);
 		return null;
 	}
 	

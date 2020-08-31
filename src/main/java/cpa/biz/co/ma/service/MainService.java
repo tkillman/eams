@@ -1,6 +1,5 @@
 package cpa.biz.co.ma.service;
 
-import java.util.List;
 import java.util.Map;
 
 import cpa.biz.co.ma.model.MainVO;
@@ -11,7 +10,7 @@ import cpa.biz.co.ma.model.MainVO;
 * MainService.java
 * 클래스 설명 : 메인 Service
 * 		
-* @author syan
+* @author 안선영
 * @since 2020.8.20
 * @version 1.0.0
 * @see
@@ -21,16 +20,15 @@ import cpa.biz.co.ma.model.MainVO;
 *
 * 수정                           수정자	수정내용
 * -------                   --------           --------------------------
-* 2020.8.20     syan	최초 생성
+* 2020.8.20     안선영	최초 생성
 * </pre>
 */
 
 public interface MainService {
 	
-	/**
-	* 공지사항를 조회한다.
-	* @param MainVO
-	* @return
-	*/	
 	Map<String, Object> selectBbsList(MainVO mainVO);
+	
+	MainVO loginProc(MainVO mainVO);
+	
+	MainVO searchPassword(MainVO mainVO);
 }

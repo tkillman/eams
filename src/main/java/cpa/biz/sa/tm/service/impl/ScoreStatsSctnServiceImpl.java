@@ -35,27 +35,26 @@ public class ScoreStatsSctnServiceImpl implements ScoreStatsSctnService{
 	ScoreStatsSctnDAO scoreStatsSctnDAO;
 	
 	@Override
-	public List<ScoreStatsSctnVO> searchScoreStatsSctnList(ScoreStatsSctnVO scoreStatsSctnVO) {
-		scoreStatsSctnDAO.selectList("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
-		return null;
+	public List<ScoreStatsSctnVO> searchScoreStatsSctnAjaxList(ScoreStatsSctnVO scoreStatsSctnVO) {
+		
+		return scoreStatsSctnDAO.selectScoreStatsSctnAjaxList(scoreStatsSctnVO);
 	}
 
 	@Override
 	public int insertScoreStatsSctn(ScoreStatsSctnVO scoreStatsSctnVO) {
-		scoreStatsSctnDAO.insert("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
-		return 0;
+		return scoreStatsSctnDAO.insertScoreStatsSctn(scoreStatsSctnVO);
 	}
 
 	@Override
 	public int updateScoreStatsSctn(ScoreStatsSctnVO scoreStatsSctnVO) {
-		scoreStatsSctnDAO.update("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
-		return 0;
+		
+		return scoreStatsSctnDAO.updateScoreStatsSctn(scoreStatsSctnVO);
 	}
 
 	@Override
 	public int deleteScoreStatsSctn(ScoreStatsSctnVO scoreStatsSctnVO) {
-		scoreStatsSctnDAO.delete("ScoreStatsSctnDAO.searchScoreStatsSctnList", scoreStatsSctnVO);
-		return 0;
+		
+		return scoreStatsSctnDAO.deleteScoreStatsSctn(scoreStatsSctnVO);
 	}
 
 }

@@ -81,8 +81,8 @@ public class EgovComIndexController implements ApplicationContextAware, Initiali
 	@RequestMapping("/EgovContent.do")
 	public String setContent(ModelMap model) {
 
-		LoginVO loginVO = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();
-		model.addAttribute("loginVO", loginVO);
+		//LoginVO loginVO = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();
+		//model.addAttribute("loginVO", loginVO);
 
 		return "egovframework/com/cmm/EgovUnitContent";
 	}

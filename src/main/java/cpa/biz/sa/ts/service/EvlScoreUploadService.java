@@ -1,5 +1,13 @@
 package cpa.biz.sa.ts.service;
 
+import java.util.List;
+
+import org.springframework.validation.BindingResult;
+
+import cpa.biz.sa.ts.model.CmmnTnEntschInfoVO;
+import cpa.biz.sa.ts.model.CmmnTnIemInfoVO;
+import cpa.biz.sa.ts.model.CmmnTnRealmInfoVO;
+import cpa.biz.sa.ts.model.CmmnTnSbjectInfoVO;
 import cpa.biz.sa.ts.model.EvlScoreUploadVO;
 
 /**
@@ -33,4 +41,50 @@ public interface EvlScoreUploadService {
 	*/
 	public int updateEvlScoreUploadExcel(EvlScoreUploadVO evlScoreUploadVO) throws Exception;
 	
+	/**
+	* Author : 김동규
+	* 기수 목록조회한다.
+	*
+	* @return List<CmmnTnEntschInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnEntschInfoVO> searchTnEntschInfoAjaxList();
+	
+	/**
+	* Author : 김동규
+	* 분야 목록조회한다.
+	*
+	* @return List<CmmnTnIemInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnIemInfoVO> searchTnIemInfoAjaxList();
+	
+	/**
+	* Author : 김동규
+	* 항목 목록조회한다.
+	*
+	* @return List<CmmnTnRealmInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnRealmInfoVO> searchTnRealmInfoAjaxList();
+	
+	/**
+	* Author : 김동규
+	* 과목 목록조회한다.
+	*
+	* @return List<CmmnTnSbjectInfoVO>
+	* @exception Exception
+	*/
+	public List<CmmnTnSbjectInfoVO> searchTnSbjectInfoAjaxList();
+	
+	/**
+	* Author : 김동규
+	* 게시판의 목록을 조회한다.
+	*
+	* @param EvlScoreUploadVO - 조회할 정보가 담긴 EvlScoreUploadVO
+	* @param BindingResult - 에러 BindingResult
+	* @return void
+	* @exception Exception
+	*/
+	public void validate(EvlScoreUploadVO evlScoreUploadVO, BindingResult bindingResult);
 }

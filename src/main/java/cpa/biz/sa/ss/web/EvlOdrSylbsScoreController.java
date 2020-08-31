@@ -40,8 +40,8 @@ public class EvlOdrSylbsScoreController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchEvlOdrSylbsScoreList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO) throws Exception {
-		evlOdrSylbsScoreService.searchEvlOdrSylbsScoreList(evlOdrSylbsScoreSearchVO);
+	public String searchEvlOdrSylbsScoreAjaxList(EvlOdrSylbsScoreSearchVO evlOdrSylbsScoreSearchVO) throws Exception {
+		evlOdrSylbsScoreService.searchEvlOdrSylbsScoreAjaxList(evlOdrSylbsScoreSearchVO);
 		return null;
 	}
 	

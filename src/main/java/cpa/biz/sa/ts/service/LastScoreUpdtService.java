@@ -1,5 +1,6 @@
 package cpa.biz.sa.ts.service;
 
+import cpa.biz.sa.ts.model.LastScoreUpdtSearchVO;
 import cpa.biz.sa.ts.model.LastScoreUpdtVO;
 
 /**
@@ -30,7 +31,7 @@ public interface LastScoreUpdtService {
 	* @return LastScoreUpdtVO
 	* @exception Exception
 	*/
-	public LastScoreUpdtVO searchLastScoreUpdt(LastScoreUpdtVO lastScoreUpdtVO);
+	public LastScoreUpdtVO searchLastScoreUpdt(LastScoreUpdtSearchVO lastScoreUpdtSearchVO);
 	
 	/**
 	* Author : 김동규

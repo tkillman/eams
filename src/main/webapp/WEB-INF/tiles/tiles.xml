@@ -19,16 +19,48 @@
     </definition>
 
     <!--메인 -->
-    <definition name="main" extends="empty_layout">
-        <put-attribute name="body" value="/WEB-INF/jsp/cpa/main.jsp" />
+    <definition name="Main" extends="empty_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/Main.jsp" />
     </definition>
 	
-	<definition name="*/*" extends="default_layout">
-        <put-attribute name="body" value="/WEB-INF/jsp/cpa/{1}/{2}/{3}.jsp" />
+    <definition name="co/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/co/{1}/{2}.jsp" />
     </definition>
     
-    <definition name="*/*/*" extends="default_layout">
-        <put-attribute name="body" value="/WEB-INF/jsp/cpa/{1}/{2}/{3}.jsp" />
+    <definition name="st/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/st/{1}/{2}.jsp" />
     </definition>
-
+    
+    <definition name="sm/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/sm/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="lt/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/lt/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="tm/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/tm/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="rt/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/rt/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="lm/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/lm/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="sa/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/sa/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="am/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/am/{1}/{2}.jsp" />
+    </definition>
+    
+    <definition name="ad/*/*" extends="default_layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/cpa/ad/{1}/{2}.jsp" />
+    </definition>
+	
 </tiles-definitions>

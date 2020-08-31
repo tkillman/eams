@@ -3,6 +3,7 @@ package cpa.biz.sa.ts.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import cpa.biz.sa.ts.model.LastScoreUpdtSearchVO;
 import cpa.biz.sa.ts.model.LastScoreUpdtVO;
 import cpa.biz.sa.ts.service.LastScoreUpdtService;
 
@@ -39,9 +40,9 @@ public class LastScoreUpdtController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchLastScoreUpdt(LastScoreUpdtVO LastScoreUpdtVO) {
+	public String searchLastScoreUpdt(LastScoreUpdtSearchVO lastScoreUpdtSearchVO) {
 		
-		lastScoreUpdtService.searchLastScoreUpdt(LastScoreUpdtVO);
+		lastScoreUpdtService.searchLastScoreUpdt(lastScoreUpdtSearchVO);
 		return null;
 	}
 	

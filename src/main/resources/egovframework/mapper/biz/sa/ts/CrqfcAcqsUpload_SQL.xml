@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CrqfcAcqsUploadDAO">
+<!--  
+	<update id="updateTnStdntQuflcnInfo" parameterType="cpa.biz.sa.ts.model.CrqfcAcqsUploadExcelMappingVO">
+		MERGE INTO tn_stdnt_quflcn_info A USING db_root
+			ON A.quflcn_code = #{quflcnCode} AND A.stdnt_uno = #{stdntUno}
+		WHEN MATCHED THEN
+			UPDATE SET A.crqfc_no = #{crqfcNo}
+						, A.acqs_de = replace(#{acqsDe},'/','')
+						, A.updusr = #{updusr}
+						, A.updt_dt = TO_CHAR(sys_datetime, 'YYYYMMDDHH24MISS')
+		WHEN NOT MATCHED THEN									
+			INSERT 
+				(A.quflcn_code, A.stdnt_uno, A.crqfc_no, acqs_de, A."register", A.regist_dt, A.updusr, A.updt_dt)
+				VALUES
+					(#{quflcnCode}, #{stdntUno}, #{crqfcNo}, replace(#{acqsDe},'/',''), #{register}, TO_CHAR(sys_datetime, 'YYYYMMDDHH24MISS'), #{updusr}, TO_CHAR(sys_datetime, 'YYYYMMDDHH24MISS'))
+	</update>
+	
+	<select id="selectTnStdntInfoList" parameterType="hashMap" resultType="cpa.biz.sa.ts.model.CmmnTnStdntInfoVO">
+		SELECT stdnt_uno
+				, stdnt_no, clas_uno, brck_info_uno, entsch_uno, re_entsch_mng_uno
+				, ihidnum, fnm, password, apyexm_police_code, chcrt_fnm, eng_fnm
+				, zip, adres, brthdy, sexdstn_code, ownhom_cttpc
+				, moblphon, insch_cttpc, height, bdwgh, left_crrc_vspr
+				, rght_crrc_vspr, glss_wear_at, bdp_code, charct_ty, spcabl_code
+				, hobby_code, smkng_code, dnpy_code, relgn_code, polc_apply_sync, mrrg_at
+				, mltart_code, grad, unqspa_code, unqspa_etc_nm, mtrsc_code, curimpt_nm
+				, clss_code, ofcr_orgin_code, ssn, srvic_begin_de, srvic_end_de
+				, rm, army_srvic_place, entsch_sttus_code, entsch_de, lvskul_de
+				, lvskul_resn, lvskul_at, indhelt_sttus_cn, emr_cttpc_adres, emr_cttpsber_nm
+				, emr_cntctrrel_nm, stdnt_hed_at, password_error_cot, password_change_de, tmpr_password_issu_at
+				, intrst_stdnt_at, delete_at, regist_dt, "register", updt_dt
+				, updusr
+		FROM tn_stdnt_info
+		WHERE ENTSCH_UNO = #{entschUno}
+	</select>
+	
+	<select id="selectTnEntschInfo" parameterType="cpa.biz.sa.ts.model.CrqfcAcqsUploadVO" resultType="cpa.biz.sa.ts.model.CmmnTnEntschInfoVO">
+		SELECT entsch_uno, "year", cno, crse_code, edc_begin_de
+				, edc_end_de, nmpr_co, cno_se_code, "register", regist_dt
+				, updusr, updt_dt
+		FROM tn_entsch_info
+		WHERE "year" = #{year}
+		AND cno = #{cno}
+		AND crse_code = #{crseCode}
+	</select>
+	-->
+	
+	<update id="updateTnStdntQuflcnInfo" parameterType="java.util.List">								
+		INSERT 
+			(A.quflcn_code, A.stdnt_uno, A.crqfc_no, acqs_de, A."register", A.regist_dt, A.updusr, A.updt_dt)
+			VALUES
+			<foreach collection="list" item="item" separator=" , " >
+				("${item.quflcnCode}", "${item.stdntUno}", "${item.crqfcNo}", "${item.acqsDe}", "test", TO_CHAR(sys_datetime, 'YYYYMMDDHH24MISS'), "test", TO_CHAR(sys_datetime, 'YYYYMMDDHH24MISS'));
+			</foreach>	
+	</update>
+</mapper>

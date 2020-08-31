@@ -1,7 +1,10 @@
 package cpa.biz.sa.tm.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.GnrlzScoreInqireVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -26,5 +29,15 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("GnrlzScoreInqireDAO")
 public class GnrlzScoreInqireDAO extends EgovComAbstractDAO{
 	
-	
+	/**
+	* Author : 김동규
+	* 종합점수조회 목록을 조회한다.
+	*
+	* @param GnrlzScoreInqireVO - 조회할 정보가 담긴 GnrlzScoreInqireVO
+	* @return List<GnrlzScoreInqireVO>
+	* @exception Exception
+	*/
+	public List<GnrlzScoreInqireVO> selectGnrlzScoreInqireAjaxList(GnrlzScoreInqireVO gnrlzScoreInqireVO){
+		return selectList("GnrlzScoreInqireDAO.selectGnrlzScoreInqireAjaxList");
+	}	
 }

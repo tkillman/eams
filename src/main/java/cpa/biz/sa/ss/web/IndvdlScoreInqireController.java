@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import cpa.biz.sa.ss.model.IndvdlScoreInqireSearchVO;
-import cpa.biz.sa.ss.model.IndvdlScoreInqireVO;
 import cpa.biz.sa.ss.service.IndvdlScoreInqireService;
 
 /**
@@ -40,8 +39,8 @@ public class IndvdlScoreInqireController {
 	* @return String
 	* @exception Exception
 	*/
-	public String searchIndvdlScoreInqire(IndvdlScoreInqireSearchVO indvdlScoreInqireSearchVO) {
-		indvdlScoreInqireService.searchIndvdlScoreInqire(indvdlScoreInqireSearchVO);
+	public String searchIndvdlScoreInqireDetail(IndvdlScoreInqireSearchVO indvdlScoreInqireSearchVO) {
+		indvdlScoreInqireService.searchIndvdlScoreInqireDetail(indvdlScoreInqireSearchVO);
 		return null;
 	}
 }

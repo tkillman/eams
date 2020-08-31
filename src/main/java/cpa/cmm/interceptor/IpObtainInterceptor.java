@@ -1,12 +1,6 @@
 package cpa.cmm.interceptor;
  
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-
-import cpa.cmm.LoginVO;
-import cpa.cmm.util.EgovUserDetailsHelper;
  
 /**
  * 사용자IP 체크 인터셉터
@@ -26,17 +20,17 @@ import cpa.cmm.util.EgovUserDetailsHelper;
 
 public class IpObtainInterceptor extends HandlerInterceptorAdapter {
  
-	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
- 
-		String clientIp = request.getRemoteAddr();
- 
-		LoginVO loginVO = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();
- 
-		if (loginVO != null) {
-			loginVO.setIp(clientIp);
-		}
- 
-		return true;
-	}
+//	@Override
+//	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+// 
+//		String clientIp = request.getRemoteAddr();
+// 
+//		LoginVO loginVO = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();
+// 
+//		if (loginVO != null) {
+//			loginVO.setIp(clientIp);
+//		}
+// 
+//		return true;
+//	}
 }

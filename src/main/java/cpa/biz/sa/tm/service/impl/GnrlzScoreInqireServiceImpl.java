@@ -35,9 +35,8 @@ public class GnrlzScoreInqireServiceImpl implements GnrlzScoreInqireService {
 	GnrlzScoreInqireDAO gnrlzScoreInqireDAO;
 	
 	@Override
-	public List<GnrlzScoreInqireVO> searchGnrlzScoreInqireList(GnrlzScoreInqireVO gnrlzScoreInqireVO) {
-		gnrlzScoreInqireDAO.selectList("GnrlzScoreInqireDAO.searchGnrlzScoreInqireList", gnrlzScoreInqireVO);
-		return null;
+	public List<GnrlzScoreInqireVO> searchGnrlzScoreInqireAjaxList(GnrlzScoreInqireVO gnrlzScoreInqireVO) {
+		return gnrlzScoreInqireDAO.selectGnrlzScoreInqireAjaxList(gnrlzScoreInqireVO);
 	}
 
 	@Override

@@ -33,5 +33,5 @@ public interface ApyexmPoliceScreService {
 	* @return List<ApyexmPoliceScreVO>
 	* @exception Exception
 	*/
-	public List<ApyexmPoliceScreVO> searchApyexmPoliceScreList(ApyexmPoliceScreVO apyexmPoliceScreVO);
+	public List<ApyexmPoliceScreVO> searchApyexmPoliceScreAjaxList(ApyexmPoliceScreVO apyexmPoliceScreVO);
 }

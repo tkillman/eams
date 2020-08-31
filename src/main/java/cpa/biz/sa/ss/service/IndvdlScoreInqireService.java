@@ -32,5 +32,5 @@ public interface IndvdlScoreInqireService {
 	* @return IndvdlScoreInqireVO
 	* @exception Exception
 	*/
-	public IndvdlScoreInqireVO searchIndvdlScoreInqire(IndvdlScoreInqireSearchVO IndvdlScoreInqireSearchVO);
+	public IndvdlScoreInqireVO searchIndvdlScoreInqireDetail(IndvdlScoreInqireSearchVO IndvdlScoreInqireSearchVO);
 }

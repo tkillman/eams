@@ -1,71 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="cpa.biz.co.tm.web.GnrlzScoreInqireController" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/web/GnrlzScoreInqireController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="343" x="319" y="45"/>    
+  <class id="1" language="java" name="cpa.biz.sa.tm.web.GnrlzScoreInqireController" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/web/GnrlzScoreInqireController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="269" y="101"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="cpa.biz.co.tm.service.GnrlzScoreInqireService" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/service/GnrlzScoreInqireService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="461" x="269" y="209"/>    
+  <interface id="2" language="java" name="cpa.biz.sa.tm.service.GnrlzScoreInqireService" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/service/GnrlzScoreInqireService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="286" y="256"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="cpa.biz.co.tm.service.impl.GnrlzScoreInqireServiceImpl" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/service/impl/GnrlzScoreInqireServiceImpl.java" binary="false" 
+  <class id="3" language="java" name="cpa.biz.sa.tm.service.impl.GnrlzScoreInqireServiceImpl" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/service/impl/GnrlzScoreInqireServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="501" y="407"/>    
+    <position height="-1" width="-1" x="285" y="394"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="cpa.biz.co.tm.dao.GnrlzScoreInqireDAO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/dao/GnrlzScoreInqireDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="178" x="834" y="366"/>    
+  <class id="4" language="java" name="cpa.biz.sa.tm.dao.GnrlzScoreInqireDAO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/dao/GnrlzScoreInqireDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="509" y="525"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="cpa.biz.co.tm.model.GnrlzScoreInqireVO" project="eams" 
-    file="/eams/src/main/java/cpa/biz/co/tm/model/GnrlzScoreInqireVO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="167" x="812" y="122"/>    
+  <class id="5" language="java" name="cpa.biz.sa.tm.model.GnrlzScoreInqireSearchVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/model/GnrlzScoreInqireSearchVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="641" y="173"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="6">    
+  <class id="6" language="java" name="cpa.biz.sa.tm.model.GnrlzScoreInqireVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/tm/model/GnrlzScoreInqireVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="845" y="58"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="cpa.biz.sa.ss.model.CmmnTnEvlScoreVO" project="eams" 
+    file="/eams/src/main/java/cpa/biz/sa/ss/model/CmmnTnEvlScoreVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="864" y="456"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="8">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="9" name="gnrlzScoreInqireDAO">        
+        <position height="0" width="0" x="-126" y="105"/>      
+      </attribute>      
+      <multiplicity id="10" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-126" y="105"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <realization id="11">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <association id="7">    
+  <generalization id="12">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="13">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="8" name="gnrlzScoreInqireService"/>      
-      <multiplicity id="9" minimum="0" maximum="1"/>    
+      <attribute id="14" name="gnrlzScoreInqireService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="15" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="10">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="11" name="gnrlzScoreInqireDAO"/>      
-      <multiplicity id="12" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

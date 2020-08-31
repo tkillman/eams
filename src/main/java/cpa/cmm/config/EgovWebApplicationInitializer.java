@@ -16,10 +16,9 @@ import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.multipart.support.MultipartFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import cpa.cmm.context.EgovWebServletContextListener;
 import cpa.cmm.filter.HTMLTagFilter;
 import cpa.cmm.service.EgovProperties;
-import cpa.cmm.utl.wed.filter.CkFilter;
+//import cpa.cmm.utl.wed.filter.CkFilter;
 
 
 /**
@@ -58,8 +57,8 @@ public class EgovWebApplicationInitializer implements WebApplicationInitializer 
 		//-------------------------------------------------------------
 		// Egov Web ServletContextListener 설정
 		//-------------------------------------------------------------
-		ServletContextListener listener = new EgovWebServletContextListener();
-		servletContext.addListener(listener);
+		//ServletContextListener listener = new EgovWebServletContextListener();
+		//servletContext.addListener(listener);
 		
 		//-------------------------------------------------------------
 		// Spring CharacterEncodingFilter 설정
@@ -103,9 +102,9 @@ public class EgovWebApplicationInitializer implements WebApplicationInitializer 
 		//-------------------------------------------------------------
 		// CkFilter 설정 (CKEditor 사용시 설정)
 		//-------------------------------------------------------------
-		FilterRegistration.Dynamic regCkFilter = servletContext.addFilter("CKFilter", new CkFilter());
-		regCkFilter.setInitParameter("properties", "egovframework/egovProps/ck.properties");
-		regCkFilter.addMappingForUrlPatterns(null, false, "/ckupload");
+		//FilterRegistration.Dynamic regCkFilter = servletContext.addFilter("CKFilter", new CkFilter());
+		//regCkFilter.setInitParameter("properties", "egovframework/egovProps/ck.properties");
+		//regCkFilter.addMappingForUrlPatterns(null, false, "/ckupload");
 		
 		//-------------------------------------------------------------
 		// HiddenHttpMethodFilter 설정 (Facebook OAuth 사용시 설정)

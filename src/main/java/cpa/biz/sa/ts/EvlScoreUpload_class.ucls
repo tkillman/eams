@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="cpa.biz.sa.ts.web.EvlScoreUploadController" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/web/EvlScoreUploadController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="304" y="86"/>    
+    <position height="-1" width="-1" x="279" y="-1"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="cpa.biz.sa.ts.service.EvlScoreUploadService" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/service/EvlScoreUploadService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="304" y="235"/>    
+    <position height="-1" width="-1" x="290" y="205"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -22,7 +22,7 @@
   <class id="3" language="java" name="cpa.biz.sa.ts.service.impl.EvlScoreUploadServiceImpl" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/service/impl/EvlScoreUploadServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="304" y="374"/>    
+    <position height="-1" width="-1" x="290" y="479"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -40,7 +40,7 @@
   </class>  
   <class id="5" language="java" name="cpa.biz.sa.ts.dao.EvlScoreUploadDAO" project="eams" 
     file="/eams/src/main/java/cpa/biz/sa/ts/dao/EvlScoreUploadDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="615" y="454"/>    
+    <position height="-1" width="-1" x="665" y="601"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,20 +48,28 @@
     </display>  
   </class>  
   <association id="6">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="7" name="evlScoreUploadService"/>      
-      <multiplicity id="8" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="9">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="10" name="evlScoreUploadDAO"/>      
-      <multiplicity id="11" minimum="0" maximum="1"/>    
+      <attribute id="7" name="evlScoreUploadDAO">        
+        <position height="0" width="0" x="50" y="147"/>      
+      </attribute>      
+      <multiplicity id="8" minimum="0" maximum="1">        
+        <position height="0" width="0" x="50" y="147"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="9">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="10" name="evlScoreUploadService">        
+        <position height="0" width="0" x="-14" y="-30"/>      
+      </attribute>      
+      <multiplicity id="11" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-14" y="-30"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <realization id="12">    
     <end type="SOURCE" refId="3"/>    

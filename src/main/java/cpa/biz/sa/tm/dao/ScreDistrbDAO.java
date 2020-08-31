@@ -1,7 +1,11 @@
 package cpa.biz.sa.tm.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
+import cpa.biz.sa.tm.model.ScreDistrbSearchVO;
+import cpa.biz.sa.tm.model.ScreDistrbVO;
 import cpa.cmm.service.impl.EgovComAbstractDAO;
 
 /**
@@ -26,4 +30,7 @@ import cpa.cmm.service.impl.EgovComAbstractDAO;
 @Repository("ScreDistrbDAO")
 public class ScreDistrbDAO extends EgovComAbstractDAO{
 
+	public List<ScreDistrbVO> selectScreDistrbAjaxList(ScreDistrbSearchVO screDistrbSearchVO){
+		return selectList("ScreDistrbDAO.selectScreDistrbAjaxList", screDistrbSearchVO);
+	}
 }

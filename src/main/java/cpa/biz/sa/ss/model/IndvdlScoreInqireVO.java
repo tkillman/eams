@@ -24,4 +24,11 @@ import lombok.Data;
 @Data
 public class IndvdlScoreInqireVO extends CmmnTnEvlScoreVO {
 	
+	private String fnm; //* 이름 */
+	
+	private String sexdstnCode; //* 성별 * /
+	
+	private String apyexmPoliceCode; //** 응시청코드 */
+	
+	private String entschSttusCode; //** 입교상태코드 */
 }

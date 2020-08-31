@@ -33,7 +33,7 @@ public interface ScoreStatsSctnService {
 	* @return List<ScoreStatsSctnVO>
 	* @exception Exception
 	*/
-	public List<ScoreStatsSctnVO> searchScoreStatsSctnList(ScoreStatsSctnVO scoreStatsSctnVO);
+	public List<ScoreStatsSctnVO> searchScoreStatsSctnAjaxList(ScoreStatsSctnVO scoreStatsSctnVO);
 	
 	/**
 	* Author : 김동규

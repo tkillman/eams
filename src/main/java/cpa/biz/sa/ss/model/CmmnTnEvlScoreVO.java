@@ -25,12 +25,12 @@ import lombok.Data;
 public class CmmnTnEvlScoreVO {
 	
 	private Integer evlInfoUno; /** 평가정보고유번호 */
-	private Integer evlQesitmUno; /** 평가 문항 고유번호 */
+	private Integer evlQesitmUno; /** 평가문항고유번호 */
 	private Integer evlScore; /** 평가점수 */
-	private Integer evlUno; /** 기수 평가 고유번호 */
+	private Integer evlUno; /** 기수평가고유번호 */
 	private String registDt; /** 등록일시 */
 	private String register; /** 등록자 */
-	private Integer sylbsUno; /** 기수 요목 고유번호 */
+	private Integer sylbsUno; /** 기수요목고유번호 */
 	private String updtDt; /** 수정일시 */
 	private String updusr; /** 수정자 */
 }
